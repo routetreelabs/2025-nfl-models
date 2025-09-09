@@ -142,7 +142,7 @@ week2_games_fd = [
     get_team_features(df, 2025, "PIT", spread=-3.0, total=40.5, home=1),
     get_team_features(df, 2025, "SEA", spread=+3.0, total=40.5, home=0),
     get_team_features(df, 2025, "NOR", spread=+4.5, total=42.5, home=1),
-    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0)
+    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0),
     get_team_features(df, 2025, "CIN", spread=-3.0, total=49.5, home=1),
     get_team_features(df, 2025, "JAX", spread=+3.0, total=49.5, home=0),
     get_team_features(df, 2025, "RAV", spread=-11.5, total=45.5, home=1),
@@ -167,13 +167,13 @@ week2_games_fd = [
 week2_df_fd = pd.DataFrame(week2_games_fd)
 
 if st.button("Run Week 2 Predictions - FanDuel"):
-    probs = model.predict_proba(week1_df_fd[features_avg])[:, 1]
+    probs = model.predict_proba(week2_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
     results_fd = []
     for i, (prob, pred) in enumerate(zip(probs, preds)):
-        home = week1_teams[i]["Home"]
-        away = week1_teams[i]["Away"]
+        home = week2_teams[i]["Home"]
+        away = week2_teams[i]["Away"]
         winner = home if pred == 1 else away
         results_fd.append({
             "Matchup": f"{away} @ {home}",
@@ -200,7 +200,7 @@ week2_games_dk = [
     get_team_features(df, 2025, "PIT", spread=-2.5, total=39.5, home=1),
     get_team_features(df, 2025, "SEA", spread=+2.5, total=39.5, home=0),
     get_team_features(df, 2025, "NOR", spread=+4.5, total=42.5, home=1),
-    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0)
+    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0),
     get_team_features(df, 2025, "CIN", spread=-3.5, total=49.5, home=1),
     get_team_features(df, 2025, "JAX", spread=+3.5, total=49.5, home=0),
     get_team_features(df, 2025, "RAV", spread=-11.5, total=45.5, home=1),
@@ -226,13 +226,13 @@ week2_games_dk = [
 week2_df_dk = pd.DataFrame(week1_games_dk)
 
 if st.button("Run Week 2 Predictions - DraftKings"):
-    probs = model.predict_proba(week1_df_dk[features_avg])[:, 1]
+    probs = model.predict_proba(week2_df_dk[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
     results_dk = []
     for i, (prob, pred) in enumerate(zip(probs, preds)):
-        home = week1_teams[i]["Home"]
-        away = week1_teams[i]["Away"]
+        home = week2_teams[i]["Home"]
+        away = week2_teams[i]["Away"]
         winner = home if pred == 1 else away
         results_dk.append({
             "Matchup": f"{away} @ {home}",
