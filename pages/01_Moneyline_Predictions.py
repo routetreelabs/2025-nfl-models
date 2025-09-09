@@ -51,10 +51,11 @@ for col in stat_cols:
           .reset_index(level=[0,1], drop=True)
     )
 
-# Fill NaN (Week 1) with league average
+# Fill NaN (only Week 1 rows) with league average
 for col in stat_cols:
+    mask = df[f'{col}_avg'].isna()
     league_avg = df[col].mean()
-    df[f'{col}_avg'].fillna(league_avg, inplace=True)
+    df.loc[mask, f'{col}_avg'] = league_avg
 
 # Features
 features_avg = ['Spread', 'Total', 'Home'] + [f'{col}_avg' for col in stat_cols]
@@ -88,52 +89,84 @@ if debug:
     st.subheader("Confusion Matrix")
     st.write(confusion_matrix(y_test, y_pred))
 
+# Helper function to build feature rows for predictions
+def get_team_features(df, season, team, spread, total, home):
+    # Grab the most recent row for this team (latest game played)
+    team_row = df[(df['Season'] == season) & (df['Team'] == team)].iloc[-1]
+
+    # Start with Vegas info
+    features = {"Spread": spread, "Total": total, "Home": home}
+
+    # Add rolling averages for all stat columns
+    for c in stat_cols:
+        features[f"{c}_avg"] = team_row[f"{c}_avg"]
+
+    return features
+
+
 # Shared team list
-week1_teams = [
-    {"Home": "Eagles", "Away": "Cowboys"},
-    {"Home": "Chargers", "Away": "Chiefs"},
-    {"Home": "Commanders", "Away": "Giants"},
-    {"Home": "Jaguars", "Away": "Panthers"},
-    {"Home": "Jets", "Away": "Steelers"},
-    {"Home": "Patriots", "Away": "Raiders"},
-    {"Home": "Saints", "Away": "Cardinals"},
-    {"Home": "Browns", "Away": "Bengals"},
-    {"Home": "Colts", "Away": "Dolphins"},
-    {"Home": "Falcons", "Away": "Buccaneers"},
-    {"Home": "Broncos", "Away": "Titans"},
-    {"Home": "Seahawks", "Away": "49ers"},
-    {"Home": "Packers", "Away": "Lions"},
-    {"Home": "Rams", "Away": "Texans"},
-    {"Home": "Bills", "Away": "Ravens"},
-    {"Home": "Bears", "Away": "Vikings"}
+week2_teams = [
+    {"Home": "Packers", "Away": "Commanders"},
+    {"Home": "Cowboys", "Away": "Giants"},
+    {"Home": "Jets", "Away": "Bills"},
+    {"Home": "Saints", "Away": "49ers"},
+    {"Home": "Titans", "Away": "Rams"},
+    {"Home": "Steelers", "Away": "Seahawks"},
+    {"Home": "Bengals", "Away": "Jaguars"},
+    {"Home": "Ravens", "Away": "Browns"},
+    {"Home": "Lions", "Away": "Bears"},
+    {"Home": "Dolphins", "Away": "Patriots"},
+    {"Home": "Cardinals", "Away": "Panthers"},
+    {"Home": "Colts", "Away": "Broncos"},
+    {"Home": "Chiefs", "Away": "Eagles"},
+    {"Home": "Vikings", "Away": "Falcons"},
+    {"Home": "Texans", "Away": "Buccaneers"},
+    {"Home": "Raiders", "Away": "Chargers"}
 ]
 
-# FanDuel Week 1 Predictions
+# FanDuel Week 2 Predictions
 st.markdown("---")
-st.subheader("Week 1 Predictions - FanDuel Lines")
+st.subheader("Week 2 Predictions - FanDuel Lines")
 
 
-week1_games_fd = [
-    {'Spread': -8.5, 'Total': 48.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  3.0, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -6.5, 'Total': 45.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -4.5, 'Total': 46.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  3.0, 'Total': 37.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -2.5, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  6.5, 'Total': 44.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  4.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 46.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -8.5, 'Total': 42.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -3.0, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 50.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
+# Example FanDuel lines for Week 2 (replace with real spreads/totals)
+week2_games_fd = [
+    get_team_features(df, 2025, "GNB", spread=-3.5, total=48.5, home=1),
+    get_team_features(df, 2025, "WAS", spread=+3.5, total=48.5, home=0),
+    get_team_features(df, 2025, "DAL", spread=-5.5, total=44.5, home=1),
+    get_team_features(df, 2025, "NYG", spread=+5.5, total=44.5, home=0),
+    get_team_features(df, 2025, "NYJ", spread=+7.0, total=46.5, home=1),
+    get_team_features(df, 2025, "BUF", spread=-7.0, total=46.5, home=0),
+    get_team_features(df, 2025, "OTI", spread=+5.5, total=41.5, home=1),
+    get_team_features(df, 2025, "STL", spread=-5.5, total=41.5, home=0),
+    get_team_features(df, 2025, "PIT", spread=-3.0, total=40.5, home=1),
+    get_team_features(df, 2025, "SEA", spread=+3.0, total=40.5, home=0),
+    get_team_features(df, 2025, "NOR", spread=+4.5, total=42.5, home=1),
+    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0)
+    get_team_features(df, 2025, "CIN", spread=-3.0, total=49.5, home=1),
+    get_team_features(df, 2025, "JAX", spread=+3.0, total=49.5, home=0),
+    get_team_features(df, 2025, "RAV", spread=-11.5, total=45.5, home=1),
+    get_team_features(df, 2025, "CLE", spread=+11.5, total=45.5, home=0),
+    get_team_features(df, 2025, "DET", spread=-5.5, total=46.5, home=1),
+    get_team_features(df, 2025, "CHI", spread=+5.5, total=46.5, home=0),
+    get_team_features(df, 2025, "MIA", spread=-1.5, total=44.5, home=1),
+    get_team_features(df, 2025, "NWE", spread=+1.5, total=44.5, home=0),
+    get_team_features(df, 2025, "CRD", spread=-6.5, total=44.5, home=1),
+    get_team_features(df, 2025, "CAR", spread=+6.5, total=44.5, home=0),
+    get_team_features(df, 2025, "CLT", spread=+2.5, total=42.5, home=1),
+    get_team_features(df, 2025, "DEN", spread=-2.5, total=42.5, home=0),
+    get_team_features(df, 2025, "KAN", spread=+1.5, total=46.5, home=1),
+    get_team_features(df, 2025, "PHI", spread=-1.5, total=46.5, home=0),
+    get_team_features(df, 2025, "MIN", spread=-4.5, total=44.5, home=1),
+    get_team_features(df, 2025, "ATL", spread=+4.5, total=44.5, home=0),
+    get_team_features(df, 2025, "HTX", spread=-2.5, total=42.5, home=1),
+    get_team_features(df, 2025, "TAM", spread=+2.5, total=42.5, home=0),
+    get_team_features(df, 2025, "RAI", spread=+3.5, total=46.5, home=1),
+    get_team_features(df, 2025, "SDG", spread=-3.5, total=46.5, home=0)
 ]
-week1_df_fd = pd.DataFrame(week1_games_fd)
+week2_df_fd = pd.DataFrame(week2_games_fd)
 
-if st.button("Run Week 1 Predictions - FanDuel"):
+if st.button("Run Week 2 Predictions - FanDuel"):
     probs = model.predict_proba(week1_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
@@ -151,32 +184,48 @@ if st.button("Run Week 1 Predictions - FanDuel"):
     out_fd = pd.DataFrame(results_fd)
     st.dataframe(out_fd.style.format({"Home Win Probability": "{:.2%}"}))
 
-# DraftKings Week 1 Predictions
+# DraftKings Week 2 Predictions
 st.markdown("---")
-st.subheader("Week 1 Predictions - DraftKings Lines")
+st.subheader("Week 2 Predictions - DraftKings Lines")
 
-week1_games_dk = [
-    {'Spread': -8.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  3.0, 'Total': 45.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -6.0, 'Total': 45.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -4.5, 'Total': 45.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  3.0, 'Total': 37.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -2.5, 'Total': 44.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  6.0, 'Total': 44.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  5.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -8.5, 'Total': 42.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 47.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -3.0, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread': -1.5, 'Total': 50.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    {'Spread':  1.5, 'Total': 43.5, 'Home': 1, **{f'{c}_avg': df[c].mean() for c in stat_cols}},
-    ]
+week2_games_dk = [
+    get_team_features(df, 2025, "GNB", spread=-3.5, total=48.5, home=1),
+    get_team_features(df, 2025, "WAS", spread=+3.5, total=48.5, home=0),
+    get_team_features(df, 2025, "DAL", spread=-5.5, total=44.5, home=1),
+    get_team_features(df, 2025, "NYG", spread=+5.5, total=44.5, home=0),
+    get_team_features(df, 2025, "NYJ", spread=+7.0, total=45.5, home=1),
+    get_team_features(df, 2025, "BUF", spread=-7.0, total=45.5, home=0),
+    get_team_features(df, 2025, "OTI", spread=+5.5, total=42.5, home=1),
+    get_team_features(df, 2025, "STL", spread=-5.5, total=42.5, home=0),
+    get_team_features(df, 2025, "PIT", spread=-2.5, total=39.5, home=1),
+    get_team_features(df, 2025, "SEA", spread=+2.5, total=39.5, home=0),
+    get_team_features(df, 2025, "NOR", spread=+4.5, total=42.5, home=1),
+    get_team_features(df, 2025, "SFO", spread=-4.5, total=42.5, home=0)
+    get_team_features(df, 2025, "CIN", spread=-3.5, total=49.5, home=1),
+    get_team_features(df, 2025, "JAX", spread=+3.5, total=49.5, home=0),
+    get_team_features(df, 2025, "RAV", spread=-11.5, total=45.5, home=1),
+    get_team_features(df, 2025, "CLE", spread=+11.5, total=45.5, home=0),
+    get_team_features(df, 2025, "DET", spread=-5.5, total=47.5, home=1),
+    get_team_features(df, 2025, "CHI", spread=+5.5, total=47.5, home=0),
+    get_team_features(df, 2025, "MIA", spread=-1.5, total=43.5, home=1),
+    get_team_features(df, 2025, "NWE", spread=+1.5, total=43.5, home=0),
+    get_team_features(df, 2025, "CRD", spread=-6.5, total=43.5, home=1),
+    get_team_features(df, 2025, "CAR", spread=+6.5, total=43.5, home=0),
+    get_team_features(df, 2025, "CLT", spread=+2.5, total=42.5, home=1),
+    get_team_features(df, 2025, "DEN", spread=-2.5, total=42.5, home=0),
+    get_team_features(df, 2025, "KAN", spread=+1.5, total=46.5, home=1),
+    get_team_features(df, 2025, "PHI", spread=-1.5, total=46.5, home=0),
+    get_team_features(df, 2025, "MIN", spread=-4.5, total=45.5, home=1),
+    get_team_features(df, 2025, "ATL", spread=+4.5, total=45.5, home=0),
+    get_team_features(df, 2025, "HTX", spread=-2.5, total=42.5, home=1),
+    get_team_features(df, 2025, "TAM", spread=+2.5, total=42.5, home=0),
+    get_team_features(df, 2025, "RAI", spread=+3.0, total=46.5, home=1),
+    get_team_features(df, 2025, "SDG", spread=-3.0, total=46.5, home=0)
+]
 
-week1_df_dk = pd.DataFrame(week1_games_dk)
+week2_df_dk = pd.DataFrame(week1_games_dk)
 
-if st.button("Run Week 1 Predictions - DraftKings"):
+if st.button("Run Week 2 Predictions - DraftKings"):
     probs = model.predict_proba(week1_df_dk[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
