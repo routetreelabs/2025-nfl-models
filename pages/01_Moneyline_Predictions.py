@@ -171,9 +171,14 @@ if st.button("Run Week 2 Predictions - FanDuel"):
     preds = (probs >= 0.5).astype(int)
 
     results_fd = []
-    for i, (prob, pred) in enumerate(zip(probs, preds)):
-        home = week2_teams[i]["Home"]
-        away = week2_teams[i]["Away"]
+    for i in range (0, len(probs),2): # Step by 2
+        game_index = i // 2
+        home = week2_teams[game_index]["Home"]
+        away = week2_teams[game_index]["Away"]
+
+        prob = probs[i] # Home team
+        pred = preds[i] # 1 = Home wins, 0 = Away wins
+
         winner = home if pred == 1 else away
         results_fd.append({
             "Matchup": f"{away} @ {home}",
@@ -230,9 +235,14 @@ if st.button("Run Week 2 Predictions - DraftKings"):
     preds = (probs >= 0.5).astype(int)
 
     results_dk = []
-    for i, (prob, pred) in enumerate(zip(probs, preds)):
-        home = week2_teams[i]["Home"]
-        away = week2_teams[i]["Away"]
+    for i in range (0, len(probs),2): # Step by 2
+        game_index = i // 2
+        home = week2_teams[game_index]["Home"]
+        away = week2_teams[game_index]["Away"]
+
+        prob = probs[i] # Home team
+        pred = preds[i] # 1 = Home wins, 0 = Away wins
+
         winner = home if pred == 1 else away
         results_dk.append({
             "Matchup": f"{away} @ {home}",
