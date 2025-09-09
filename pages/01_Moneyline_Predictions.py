@@ -223,7 +223,7 @@ week2_games_dk = [
     get_team_features(df, 2025, "SDG", spread=-3.0, total=46.5, home=0)
 ]
 
-week2_df_dk = pd.DataFrame(week1_games_dk)
+week2_df_dk = pd.DataFrame(week2_games_dk)
 
 if st.button("Run Week 2 Predictions - DraftKings"):
     probs = model.predict_proba(week2_df_dk[features_avg])[:, 1]
