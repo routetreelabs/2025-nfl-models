@@ -85,6 +85,20 @@ def predict_week_points_early(games):
     input_df["Total"] = input_df["Total"].map(lambda x: f"{x:.1f}")
     return input_df
 
+# 10. Helpers for correct row selection in grouped apply
+def get_home_team(x):
+    return x.loc[x["Home"] == 1, "Team"].values[0] if (x["Home"] == 1).any() else x["Team"].values[0]
+
+def get_away_team(x):
+    return x.loc[x["Home"] == 0, "Team"].values[0] if (x["Home"] == 0).any() else x["Team"].values[0]
+
+def get_home_pred(x):
+    return x.loc[x["Home"] == 1, "Predicted_Points"].values[0] if (x["Home"] == 1).any() else x["Predicted_Points"].values[0]
+
+def get_away_pred(x):
+    return x.loc[x["Home"] == 0, "Predicted_Points"].values[0] if (x["Home"] == 0).any() else x["Predicted_Points"].values[0]
+
+
 # Week 2 Games (FanDuel)
 # FanDuel Week 2
 week2_games_fd = [
@@ -126,31 +140,26 @@ week2_games_dk = [
     {"Season": 2025, "Week": 2, "Home": 1, "Team": "RAI", "Opp": "SDG", "Spread": +3.5, "Total": 46.5, "Last1": 20, "Opp_Last1": 27},
 ]
 
-# --- FanDuel Predictions
+# FanDuel Predictions
 st.markdown("---")
 st.subheader("Week 2 Predictions – FanDuel Lines")
 if st.button("Run Week 2 Predictions – FanDuel"):
     week2_predictions_fd = predict_week_points_early(week2_games_fd)
 
-    # Create consistent matchup key regardless of home/away order
+    # Better matchup label: home vs away
     week2_predictions_fd["Matchup"] = week2_predictions_fd.apply(
-        lambda row: " vs ".join(sorted([row["Team"], row["Opponent"]])),
+        lambda row: f"{row['Team']} vs {row['Opponent']}" if row["Home"] == 1 else f"{row['Opponent']} vs {row['Team']}",
         axis=1
     )
 
-    # Calculate predicted total per game
-    totals_fd = week2_predictions_fd.groupby("Matchup").agg(
-        Home_Team=("Team", lambda x: x[week2_predictions_fd.loc[x.index, "Home"] == 1].iloc[0]
-            if (week2_predictions_fd.loc[x.index, "Home"] == 1).any() else x.iloc[0]),
-        Away_Team=("Opponent", lambda x: x[week2_predictions_fd.loc[x.index, "Home"] == 0].iloc[0]
-            if (week2_predictions_fd.loc[x.index, "Home"] == 0).any() else x.iloc[0]),
-        Home_Predicted=("Predicted_Points", lambda x: x[week2_predictions_fd.loc[x.index, "Home"] == 1].iloc[0]
-            if (week2_predictions_fd.loc[x.index, "Home"] == 1).any() else x.iloc[0]),
-        Away_Predicted=("Predicted_Points", lambda x: x[week2_predictions_fd.loc[x.index, "Home"] == 0].iloc[0]
-            if (week2_predictions_fd.loc[x.index, "Home"] == 0).any() else x.iloc[0]),
-        Predicted_Total=("Predicted_Points", "sum")
-    ).reset_index()
-
+    # Fix home/away grouping using apply()
+    totals_fd = week2_predictions_fd.groupby("Matchup").apply(lambda x: pd.Series({
+        "Home_Team": get_home_team(x),
+        "Away_Team": get_away_team(x),
+        "Home_Predicted": get_home_pred(x),
+        "Away_Predicted": get_away_pred(x),
+        "Predicted_Total": x["Predicted_Points"].sum()
+    })).reset_index()
 
     st.dataframe(week2_predictions_fd.style.format({"Predicted_Points": "{:.2f}"}))
     st.write("**Predicted Totals (FanDuel):**")
@@ -160,30 +169,25 @@ if st.button("Run Week 2 Predictions – FanDuel"):
         "Predicted_Total": "{:.2f}"
     }))
 
+
 # --- DraftKings Predictions
 st.markdown("---")
 st.subheader("Week 2 Predictions – DraftKings Lines")
 if st.button("Run Week 2 Predictions – DraftKings"):
     week2_predictions_dk = predict_week_points_early(week2_games_dk)
 
-    # Add Matchup column
     week2_predictions_dk["Matchup"] = week2_predictions_dk.apply(
-        lambda row: " vs ".join(sorted([row["Team"], row["Opponent"]])),
+        lambda row: f"{row['Team']} vs {row['Opponent']}" if row["Home"] == 1 else f"{row['Opponent']} vs {row['Team']}",
         axis=1
     )
 
-    # Calculate predicted total per game
-    totals_dk = week2_predictions_dk.groupby("Matchup").agg(
-        Home_Team=("Team", lambda x: x[week2_predictions_dk.loc[x.index, "Home"] == 1].iloc[0]
-                   if (week2_predictions_dk.loc[x.index, "Home"] == 1).any() else x.iloc[0]),
-        Away_Team=("Opponent", lambda x: x[week2_predictions_dk.loc[x.index, "Home"] == 0].iloc[0]
-                   if (week2_predictions_dk.loc[x.index, "Home"] == 0).any() else x.iloc[0]),
-        Home_Predicted=("Predicted_Points", lambda x: x[week2_predictions_dk.loc[x.index, "Home"] == 1].iloc[0]
-                        if (week2_predictions_dk.loc[x.index, "Home"] == 1).any() else x.iloc[0]),
-        Away_Predicted=("Predicted_Points", lambda x: x[week2_predictions_dk.loc[x.index, "Home"] == 0].iloc[0]
-                        if (week2_predictions_dk.loc[x.index, "Home"] == 0).any() else x.iloc[0]),
-        Predicted_Total=("Predicted_Points", "sum")
-    ).reset_index()
+    totals_dk = week2_predictions_dk.groupby("Matchup").apply(lambda x: pd.Series({
+        "Home_Team": get_home_team(x),
+        "Away_Team": get_away_team(x),
+        "Home_Predicted": get_home_pred(x),
+        "Away_Predicted": get_away_pred(x),
+        "Predicted_Total": x["Predicted_Points"].sum()
+    })).reset_index()
 
     st.dataframe(week2_predictions_dk.style.format({"Predicted_Points": "{:.2f}"}))
     st.write("**Predicted Totals (DraftKings):**")
@@ -192,4 +196,5 @@ if st.button("Run Week 2 Predictions – DraftKings"):
         "Away_Predicted": "{:.2f}",
         "Predicted_Total": "{:.2f}"
     }))
+
 
