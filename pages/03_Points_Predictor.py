@@ -75,15 +75,20 @@ if st.checkbox("Show top features"):
 # 9. Prediction Function
 def predict_week_points_early(games):
     input_df = pd.DataFrame(games)
+
     if "Last1" in input_df.columns:
         input_df["Tm_Pts_Last1"] = input_df["Last1"]
+
+    # Make sure all required columns are present in the right order
+    input_df = input_df[features_early]
+
     input_processed = preprocessor_early.transform(input_df)
     predictions = model_early.predict(input_processed)
+
     input_df["Predicted_Points"] = predictions
-    input_df = input_df.rename(columns={"Opp": "Opponent"})
-    input_df["Spread"] = input_df["Spread"].map(lambda x: f"{x:.1f}")
-    input_df["Total"] = input_df["Total"].map(lambda x: f"{x:.1f}")
+
     return input_df
+
 
 # 10. Helpers for correct row selection in grouped apply
 def get_home_team(x):
@@ -98,6 +103,26 @@ def get_home_pred(x):
 def get_away_pred(x):
     return x.loc[x["Home"] == 0, "Predicted_Points"].values[0] if (x["Home"] == 0).any() else x["Predicted_Points"].values[0]
 
+# Helper function to generate both sides of each game
+def add_reverse_games(game_list):
+    doubled = []
+    for game in game_list:
+        # Original (home team)
+        doubled.append(game)
+        # Reverse (away team)
+        reversed_game = {
+            "Season": game["Season"],
+            "Week": game["Week"],
+            "Home": 0,
+            "Team": game["Opp"],
+            "Opp": game["Team"],
+            "Spread": -game["Spread"],
+            "Total": game["Total"],
+            "Last1": game["Opp_Last1"],
+            "Opp_Last1": game["Last1"],
+        }
+        doubled.append(reversed_game)
+    return doubled
 
 # Week 2 Games (FanDuel)
 # FanDuel Week 2
@@ -144,7 +169,11 @@ week2_games_dk = [
 st.markdown("---")
 st.subheader("Week 2 Predictions – FanDuel Lines")
 if st.button("Run Week 2 Predictions – FanDuel"):
-    week2_predictions_fd = predict_week_points_early(week2_games_fd)
+    week2_games_fd_doubled = add_reverse_games(week2_games_fd)
+    week2_predictions_fd = predict_week_points_early(week2_games_fd_doubled)
+
+    week2_predictions_fd["Opponent"] = week2_predictions_fd["Opp"]
+    week2_predictions_fd = week2_predictions_fd.drop(columns="Opp")
 
     # Better matchup label: home vs away
     week2_predictions_fd["Matchup"] = week2_predictions_fd.apply(
@@ -174,7 +203,11 @@ if st.button("Run Week 2 Predictions – FanDuel"):
 st.markdown("---")
 st.subheader("Week 2 Predictions – DraftKings Lines")
 if st.button("Run Week 2 Predictions – DraftKings"):
-    week2_predictions_dk = predict_week_points_early(week2_games_dk)
+    week2_games_dk_doubled = add_reverse_games(week2_games_dk)
+    week2_predictions_dk = predict_week_points_early(week2_games_dk_doubled)
+
+    week2_predictions_dk["Opponent"] = week2_predictions_dk["Opp"]
+    week2_predictions_dk = week2_predictions_dk.drop(columns="Opp")
 
     week2_predictions_dk["Matchup"] = week2_predictions_dk.apply(
         lambda row: f"{row['Team']} vs {row['Opponent']}" if row["Home"] == 1 else f"{row['Opponent']} vs {row['Team']}",
