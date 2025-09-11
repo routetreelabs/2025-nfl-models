@@ -38,7 +38,7 @@ for i, row in preds.iterrows():
         f"| Score: {row['ConfidenceScore']:.3f}"
     )
 
-    neighbors_file = f"neighbors_{i+1}_week{current_week}.csv"
+    neighbors_file = f"neighbors_{i+1}_week{current_week}_fd.csv"
     neighbors_path = os.path.join(BASE_DIR, neighbors_file)
 
     if os.path.exists(neighbors_path):
