@@ -9,7 +9,11 @@ import pandas as pd
 import os
 
 st.title("DraftKings NFL Over/Under Predictions")
-st.markdown("**Week 1 Record:** 11–5 ✅")
+# Display past records (manually update this each week)
+st.markdown("""
+**Model Weekly Record:**
+- Week 1: 11–5 ✅
+""")
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
