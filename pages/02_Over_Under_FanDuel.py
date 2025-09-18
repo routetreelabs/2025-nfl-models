@@ -14,6 +14,7 @@ st.title("FanDuel NFL Over/Under Predictions")
 st.markdown("""
 **Model Weekly Record:**
 - Week 1: 9–7 ✅
+- Week 2: 10–6 ✅
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")

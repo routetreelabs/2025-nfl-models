@@ -14,6 +14,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 st.title("Moneyline Model – Logistic Regression")
 st.markdown("**Week 1 Record:** 14–2 ✅")
+st.markdown("**Week 2 Record:** 11–5 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
