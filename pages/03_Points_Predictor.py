@@ -167,7 +167,7 @@ week3_games_dk = [
 # FanDuel Predictions
 st.markdown("---")
 st.subheader("Week 3 Predictions – FanDuel Lines")
-if st.button("Run Week 2 Predictions – FanDuel"):
+if st.button("Run Week 3 Predictions – FanDuel"):
     week3_games_fd_doubled = add_reverse_games(week3_games_fd)
     week3_predictions_fd = predict_week_points_early(week3_games_fd_doubled)
 
