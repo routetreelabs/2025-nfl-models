@@ -19,7 +19,7 @@ st.markdown("**Week 2 Record:** 11–5 ✅")
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "datasets")
-csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week2.csv")
+csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week2_copy.csv")
 
 # Load dataset
 df = pd.read_csv(csv_path)
