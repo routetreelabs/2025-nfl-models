@@ -128,39 +128,39 @@ def add_reverse_games(game_list):
 week3_games_fd = [
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "BUF", "Opp": "MIA", "Spread": -11.5, "Total": 50.5, "Last1": 30, "Last2": 35.5, "Opp_Last1": 27, "Opp_Last2": 17.5},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "CLE", "Opp": "GNB", "Spread": +7.5, "Total": 41.5, "Last1": 17, "Last2": 16.5, "Opp_Last1": 27, "Opp_Last2": 27.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "TAM", "Opp": "NYJ", "Spread": -6.5, "Total": 44.5, "Last1": 20, "Last2": 21.5, "Opp_Last1": 10, "Opp_Last2": 21.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "PHI", "Opp": "RAM", "Spread": -3.5, "Total": 44.5, "Last1": 20, "Last2": 22.0, "Opp_Last1": 33, "Opp_Last2": 23.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CAR", "Opp": "ATL", "Spread": +5.5, "Total": 43.5, "Last1": 22, "Last2": 16.0, "Opp_Last1": 22, "Opp_Last2": 21.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "OTI", "Opp": "CLT", "Spread": +4.5, "Total": 43.5, "Last1": 19, "Last2": 15.5, "Opp_Last1": 29, "Opp_Last2": 31.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "TAM", "Opp": "NYJ", "Spread": -6.5, "Total": 43.5, "Last1": 20, "Last2": 21.5, "Opp_Last1": 10, "Opp_Last2": 21.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "PHI", "Opp": "RAM", "Spread": -3.5, "Total": 45.5, "Last1": 20, "Last2": 22.0, "Opp_Last1": 33, "Opp_Last2": 23.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CAR", "Opp": "ATL", "Spread": +4.5, "Total": 43.5, "Last1": 22, "Last2": 16.0, "Opp_Last1": 22, "Opp_Last2": 21.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "OTI", "Opp": "CLT", "Spread": +5.5, "Total": 43.5, "Last1": 19, "Last2": 15.5, "Opp_Last1": 29, "Opp_Last2": 31.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "NWE", "Opp": "PIT", "Spread": +1.5, "Total": 44.5, "Last1": 13, "Last2": 11.5, "Opp_Last1": 17, "Opp_Last2": 25.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "WAS", "Opp": "RAI", "Spread": -3.5, "Total": 44.5, "Last1": 18, "Last2": 19.5, "Opp_Last1": 9, "Opp_Last2": 14.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "WAS", "Opp": "RAI", "Spread": -3.0, "Total": 43.5, "Last1": 18, "Last2": 19.5, "Opp_Last1": 9, "Opp_Last2": 14.5},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIN", "Opp": "CIN", "Spread": -3.0, "Total": 42.5, "Last1": 6, "Last2": 16.5, "Opp_Last1": 31, "Opp_Last2": 24.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "JAX", "Opp": "HTX", "Spread": -1.5, "Total": 44.5, "Last1": 27, "Last2": 26.5, "Opp_Last1": 19, "Opp_Last2": 14.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "JAX", "Opp": "HTX", "Spread": -1.5, "Total": 43.5, "Last1": 27, "Last2": 26.5, "Opp_Last1": 19, "Opp_Last2": 14.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "SEA", "Opp": "NOR", "Spread": -7.5, "Total": 41.5, "Last1": 31, "Last2": 22.0, "Opp_Last1": 21, "Opp_Last2": 17.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SDG", "Opp": "DEN", "Spread": -2.5, "Total": 45.5, "Last1": 20, "Last2": 23.5, "Opp_Last1": 28, "Opp_Last2": 24.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SDG", "Opp": "DEN", "Spread": -3.0, "Total": 45.5, "Last1": 20, "Last2": 23.5, "Opp_Last1": 28, "Opp_Last2": 24.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "CHI", "Opp": "DAL", "Spread": +1.5, "Total": 50.5, "Last1": 21, "Last2": 22.5, "Opp_Last1": 40, "Opp_Last2": 30.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SFO", "Opp": "CRD", "Spread": -2.5, "Total": 44.5, "Last1": 26, "Last2": 21.5, "Opp_Last1": 27, "Opp_Last2": 23.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SFO", "Opp": "CRD", "Spread": -1.5, "Total": 44.5, "Last1": 26, "Last2": 21.5, "Opp_Last1": 27, "Opp_Last2": 23.5},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "NYG", "Opp": "KAN", "Spread": +5.5, "Total": 44.5, "Last1": 37, "Last2": 21.5, "Opp_Last1": 17, "Opp_Last2": 19.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "RAV", "Opp": "DET", "Spread": -5.5, "Total": 52.5, "Last1": 41, "Last2": 40.5, "Opp_Last1": 52, "Opp_Last2": 32.5}
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "RAV", "Opp": "DET", "Spread": -5.5, "Total": 53.5, "Last1": 41, "Last2": 40.5, "Opp_Last1": 52, "Opp_Last2": 32.5}
 ]
 
 # DraftKings
 week3_games_dk = [
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "BUF", "Opp": "MIA", "Spread": -12.5, "Total": 49.5, "Last1": 30, "Last2": 35.5, "Opp_Last1": 27, "Opp_Last2": 17.5},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "CLE", "Opp": "GNB", "Spread": +8.5, "Total": 41.5, "Last1": 17, "Last2": 16.5, "Opp_Last1": 27, "Opp_Last2": 27.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "TAM", "Opp": "NYJ", "Spread": -7.0, "Total": 43.5, "Last1": 20, "Last2": 21.5, "Opp_Last1": 10, "Opp_Last2": 21.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "PHI", "Opp": "RAM", "Spread": -3.5, "Total": 44.5, "Last1": 20, "Last2": 22.0, "Opp_Last1": 33, "Opp_Last2": 23.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CAR", "Opp": "ATL", "Spread": +5.5, "Total": 43.5, "Last1": 22, "Last2": 16.0, "Opp_Last1": 22, "Opp_Last2": 21.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "OTI", "Opp": "CLT", "Spread": +4.5, "Total": 43.5, "Last1": 19, "Last2": 15.5, "Opp_Last1": 29, "Opp_Last2": 31.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "TAM", "Opp": "NYJ", "Spread": -6.5, "Total": 43.5, "Last1": 20, "Last2": 21.5, "Opp_Last1": 10, "Opp_Last2": 21.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "PHI", "Opp": "RAM", "Spread": -3.5, "Total": 45.5, "Last1": 20, "Last2": 22.0, "Opp_Last1": 33, "Opp_Last2": 23.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CAR", "Opp": "ATL", "Spread": +5.5, "Total": 44.5, "Last1": 22, "Last2": 16.0, "Opp_Last1": 22, "Opp_Last2": 21.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "OTI", "Opp": "CLT", "Spread": +6.0, "Total": 43.5, "Last1": 19, "Last2": 15.5, "Opp_Last1": 29, "Opp_Last2": 31.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "NWE", "Opp": "PIT", "Spread": +1.5, "Total": 44.5, "Last1": 13, "Last2": 11.5, "Opp_Last1": 17, "Opp_Last2": 25.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "WAS", "Opp": "RAI", "Spread": -3.5, "Total": 44.5, "Last1": 18, "Last2": 19.5, "Opp_Last1": 9, "Opp_Last2": 14.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIN", "Opp": "CIN", "Spread": -3.0, "Total": 42.5, "Last1": 6, "Last2": 16.5, "Opp_Last1": 31, "Opp_Last2": 24.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "JAX", "Opp": "HTX", "Spread": -1.5, "Total": 44.5, "Last1": 27, "Last2": 26.5, "Opp_Last1": 19, "Opp_Last2": 14.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "WAS", "Opp": "RAI", "Spread": -2.5, "Total": 43.5, "Last1": 18, "Last2": 19.5, "Opp_Last1": 9, "Opp_Last2": 14.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIN", "Opp": "CIN", "Spread": -3.0, "Total": 41.5, "Last1": 6, "Last2": 16.5, "Opp_Last1": 31, "Opp_Last2": 24.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "JAX", "Opp": "HTX", "Spread": -1.5, "Total": 43.5, "Last1": 27, "Last2": 26.5, "Opp_Last1": 19, "Opp_Last2": 14.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "SEA", "Opp": "NOR", "Spread": -7.5, "Total": 41.5, "Last1": 31, "Last2": 22.0, "Opp_Last1": 21, "Opp_Last2": 17.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "SDG", "Opp": "DEN", "Spread": -2.5, "Total": 45.5, "Last1": 20, "Last2": 23.5, "Opp_Last1": 28, "Opp_Last2": 24.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CHI", "Opp": "DAL", "Spread": +1.5, "Total": 50.5, "Last1": 21, "Last2": 22.5, "Opp_Last1": 40, "Opp_Last2": 30.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SFO", "Opp": "CRD", "Spread": -3.0, "Total": 46.5, "Last1": 26, "Last2": 21.5, "Opp_Last1": 27, "Opp_Last2": 23.5},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "NYG", "Opp": "KAN", "Spread": +6.0, "Total": 45.5, "Last1": 37, "Last2": 21.5, "Opp_Last1": 17, "Opp_Last2": 19.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "CHI", "Opp": "DAL", "Spread": +1.5, "Total": 49.5, "Last1": 21, "Last2": 22.5, "Opp_Last1": 40, "Opp_Last2": 30.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "SFO", "Opp": "CRD", "Spread": -1.5, "Total": 44.5, "Last1": 26, "Last2": 21.5, "Opp_Last1": 27, "Opp_Last2": 23.5},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "NYG", "Opp": "KAN", "Spread": +6.0, "Total": 44.5, "Last1": 37, "Last2": 21.5, "Opp_Last1": 17, "Opp_Last2": 19.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "RAV", "Opp": "DET", "Spread": -4.5, "Total": 53.5, "Last1": 41, "Last2": 40.5, "Opp_Last1": 52, "Opp_Last2": 32.5}
 ]
 
