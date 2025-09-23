@@ -13,8 +13,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
 st.title("Moneyline Model – Logistic Regression")
-st.markdown("**Week 1 Record:** 14–2 ✅")
-st.markdown("**Week 2 Record:** 11–5 ✅")
+st.markdown("**Week 1 Record:** Both models 14–2 ✅")
+st.markdown("**Week 2 Record:** Both models 11–5 ✅")
+st.markdown("**Week 3 Record:** FanDuel 12–4 ✅")
+st.markdown("**Week 3 Record:** DraftKings 11–5 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
