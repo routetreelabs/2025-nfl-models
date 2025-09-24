@@ -231,7 +231,7 @@ week4_games_dk = [
     get_team_features(df, 2025, "CIN", spread=+7.5, total=44.5, home=0)
 ]
 
-week4_df_dk = pd.DataFrame(week3_games_dk)
+week4_df_dk = pd.DataFrame(week4_games_dk)
 
 if st.button("Run Week 4 Predictions - DraftKings"):
     probs = model.predict_proba(week4_df_dk[features_avg])[:, 1]
