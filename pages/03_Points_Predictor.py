@@ -128,8 +128,8 @@ week4_games_fd = [
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "RAI", "Opp": "CHI", "Spread": -1.5, "Total": 47.5, "Last1": 24, "Roll3": 17.6, "Opp_Last1": 31, "Opp_Roll3": 25.3},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "KAN", "Opp": "RAV", "Spread": +2.5, "Total": 48.5, "Last1": 22, "Roll3": 20.0, "Opp_Last1": 30, "Opp_Roll3": 37.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "DAL", "Opp": "GNB", "Spread": +6.5, "Total": 46.5, "Last1": 14, "Roll3": 24.6, "Opp_Last1": 10, "Opp_Roll3": 21.3},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIA", "Opp": "NYJ", "Spread": -2.5, "Total": 44.5, "Last1": 21, "Roll3": 18.6, "Opp_Last1": 27, "Opp_Roll3": 23.0},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "DEN", "Opp": "CIN", "Spread": -7.5, "Total": 43.5, "Last1": 20, "Roll3": 22.6, "Opp_Last1": 10, "Opp_Roll3": 19.3}
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIA", "Opp": "NYJ", "Spread": -2.5, "Total": 43.5, "Last1": 21, "Roll3": 18.6, "Opp_Last1": 27, "Opp_Roll3": 23.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "DEN", "Opp": "CIN", "Spread": -7.5, "Total": 44.5, "Last1": 20, "Roll3": 22.6, "Opp_Last1": 10, "Opp_Roll3": 19.3}
 ]
 
 # DraftKings
@@ -148,7 +148,7 @@ week4_games_dk = [
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "RAI", "Opp": "CHI", "Spread": -1.5, "Total": 47.5, "Last1": 24, "Roll3": 17.6, "Opp_Last1": 31, "Opp_Roll3": 25.3},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "KAN", "Opp": "RAV", "Spread": +2.5, "Total": 48.5, "Last1": 22, "Roll3": 20.0, "Opp_Last1": 30, "Opp_Roll3": 37.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "DAL", "Opp": "GNB", "Spread": +7.0, "Total": 47.5, "Last1": 14, "Roll3": 24.6, "Opp_Last1": 10, "Opp_Roll3": 21.3},
-    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIA", "Opp": "NYJ", "Spread": -2.5, "Total": 45.5, "Last1": 21, "Roll3": 18.6, "Opp_Last1": 27, "Opp_Roll3": 23.0},
+    {"Season": 2025, "Week": 3, "Home": 1, "Team": "MIA", "Opp": "NYJ", "Spread": -2.5, "Total": 44.5, "Last1": 21, "Roll3": 18.6, "Opp_Last1": 27, "Opp_Roll3": 23.0},
     {"Season": 2025, "Week": 3, "Home": 1, "Team": "DEN", "Opp": "CIN", "Spread": -7.5, "Total": 44.5, "Last1": 20, "Roll3": 22.6, "Opp_Last1": 10, "Opp_Roll3": 19.3}
 ]
 

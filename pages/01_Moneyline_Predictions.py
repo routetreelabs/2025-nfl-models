@@ -162,10 +162,10 @@ week4_games_fd = [
     get_team_features(df, 2025, "CHI", spread=+1.5, total=47.5, home=0),
     get_team_features(df, 2025, "DAL", spread=+6.5, total=46.5, home=1),
     get_team_features(df, 2025, "GNB", spread=-6.5, total=46.5, home=0),
-    get_team_features(df, 2025, "MIA", spread=-2.5, total=44.5, home=1),
-    get_team_features(df, 2025, "NYJ", spread=+2.5, total=44.5, home=0),
-    get_team_features(df, 2025, "DEN", spread=-7.5, total=43.5, home=1),
-    get_team_features(df, 2025, "CIN", spread=+7.5, total=43.5, home=0)
+    get_team_features(df, 2025, "MIA", spread=-2.5, total=43.5, home=1),
+    get_team_features(df, 2025, "NYJ", spread=+2.5, total=43.5, home=0),
+    get_team_features(df, 2025, "DEN", spread=-7.5, total=44.5, home=1),
+    get_team_features(df, 2025, "CIN", spread=+7.5, total=44.5, home=0)
 ]
 week4_df_fd = pd.DataFrame(week4_games_fd)
 
@@ -225,8 +225,8 @@ week4_games_dk = [
     get_team_features(df, 2025, "CHI", spread=+1.5, total=47.5, home=0),
     get_team_features(df, 2025, "DAL", spread=+7.0, total=47.5, home=1),
     get_team_features(df, 2025, "GNB", spread=-7.0, total=47.5, home=0),
-    get_team_features(df, 2025, "MIA", spread=-2.5, total=45.5, home=1),
-    get_team_features(df, 2025, "NYJ", spread=+2.5, total=45.5, home=0),
+    get_team_features(df, 2025, "MIA", spread=-2.5, total=44.5, home=1),
+    get_team_features(df, 2025, "NYJ", spread=+2.5, total=44.5, home=0),
     get_team_features(df, 2025, "DEN", spread=-7.5, total=44.5, home=1),
     get_team_features(df, 2025, "CIN", spread=+7.5, total=44.5, home=0)
 ]
