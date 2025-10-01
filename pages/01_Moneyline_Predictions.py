@@ -169,7 +169,7 @@ week4_games_fd = [
 ]
 week4_df_fd = pd.DataFrame(week4_games_fd)
 
-if st.button("Run Week 3 Predictions - FanDuel"):
+if st.button("Run Week 4 Predictions - FanDuel"):
     probs = model.predict_proba(week4_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
