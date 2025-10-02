@@ -10,7 +10,7 @@ import os
 
 st.title("FanDuel NFL Over/Under Predictions")
 
-# Display past records (manually update this each week)
+# Display past records
 st.markdown("""
 **Model Weekly Record:**
 - Week 1: 9–7 ✅
@@ -21,7 +21,7 @@ st.markdown("""
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
-# === SET CURRENT WEEK ===
+# SET CURRENT WEEK
 current_week = 5  # Change this to the latest week when updating
 
 # Load predictions for the current week

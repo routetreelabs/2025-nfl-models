@@ -9,7 +9,7 @@ import pandas as pd
 import os
 
 st.title("DraftKings NFL Over/Under Predictions")
-# Display past records (manually update this each week)
+# Display past records
 st.markdown("""
 **Model Weekly Record:**
 - Week 1: 11–5 ✅
@@ -20,7 +20,7 @@ st.markdown("""
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
-# === SET CURRENT WEEK HERE ===
+# SET CURRENT WEEK HERE
 current_week = 5
 
 # Load DK predictions file

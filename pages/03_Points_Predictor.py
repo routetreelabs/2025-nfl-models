@@ -11,12 +11,12 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 st.title("Points Predictor – Linear Regression")
 
-# --- Controls
+# Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "datasets")
 csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_Points_Week4_copy.csv")
 
-# === Load and Prepare the Data ===
+# Load and Prepare the Data
 df = pd.read_csv(csv_path)
 df["Total_Points_Scored"] = df["Tm_Pts"] + df["Opp_Pts"]
 
@@ -64,7 +64,7 @@ st.write(f"[Early Model] **R²:** {r2_early:.2f}")
 st.write(f"[Early Model] **MAE:** {mae_early:.2f}")
 st.write(f"[Early Model] **RMSE:** {rmse_early:.2f}")
 
-# --- Prediction Functions ---
+# Prediction Functions
 def predict_team_points(season, week, home, team, opponent, spread, total, last1, roll3):
     input_df = pd.DataFrame([{
         "Season": season, "Week": week, "Home": home,
