@@ -114,7 +114,7 @@ def predict_matchups(matchups):
 
 # FanDuel
 week5_games_fd = [
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "RAM", "Opp": "SFO", "Spread": -7.5, "Total": 43.5, "Last1": 27, "Roll3": 28.6, "Opp_Last1": 21, "Opp_Roll3": 21.0},
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "RAM", "Opp": "SFO", "Spread": -8.5, "Total": 43.5, "Last1": 27, "Roll3": 28.6, "Opp_Last1": 21, "Opp_Roll3": 21.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CLE", "Opp": "MIN", "Spread": +3.5, "Total": 35.5, "Last1": 10, "Roll3": 13.3, "Opp_Last1": 21, "Opp_Roll3": 25.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "PHI", "Opp": "DEN", "Spread": -4.5, "Total": 43.5, "Last1": 31, "Roll3": 28.0, "Opp_Last1": 28, "Opp_Roll3": 25.3},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CLT", "Opp": "RAI", "Spread": -6.5, "Total": 47.5, "Last1": 20, "Roll3": 30.0, "Opp_Last1": 24, "Opp_Roll3": 19.0},
@@ -132,7 +132,7 @@ week5_games_fd = [
 
 # DraftKings
 week5_games_dk = [
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "RAM", "Opp": "SFO", "Spread": -7.5, "Total": 43.5, "Last1": 27, "Roll3": 28.6, "Opp_Last1": 21, "Opp_Roll3": 21.0},
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "RAM", "Opp": "SFO", "Spread": -8.5, "Total": 43.5, "Last1": 27, "Roll3": 28.6, "Opp_Last1": 21, "Opp_Roll3": 21.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CLE", "Opp": "MIN", "Spread": +4.5, "Total": 36.5, "Last1": 10, "Roll3": 13.3, "Opp_Last1": 21, "Opp_Roll3": 25.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "PHI", "Opp": "DEN", "Spread": -3.5, "Total": 43.5, "Last1": 31, "Roll3": 28.0, "Opp_Last1": 28, "Opp_Roll3": 25.3},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CLT", "Opp": "RAI", "Spread": -7.0, "Total": 47.5, "Last1": 20, "Roll3": 30.0, "Opp_Last1": 24, "Opp_Roll3": 19.0},
