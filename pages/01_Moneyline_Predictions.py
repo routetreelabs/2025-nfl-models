@@ -133,8 +133,8 @@ st.subheader("Week 5 Predictions - FanDuel Lines")
 
 # FanDuel lines
 week5_games_fd = [
-    get_team_features(df, 2025, "RAM", spread=-8.5, total=43.5, home=1),
-    get_team_features(df, 2025, "SFO", spread=+8.5, total=43.5, home=0),
+    get_team_features(df, 2025, "RAM", spread=-7.5, total=43.5, home=1),
+    get_team_features(df, 2025, "SFO", spread=+7.5, total=43.5, home=0),
     get_team_features(df, 2025, "CLE", spread=+3.5, total=35.5, home=1),
     get_team_features(df, 2025, "MIN", spread=-3.5, total=35.5, home=0),
     get_team_features(df, 2025, "RAV", spread=+1.5, total=40.5, home=1),
@@ -194,8 +194,8 @@ st.subheader("Week 5 Predictions - DraftKings Lines")
 week5_games_dk = [
     get_team_features(df, 2025, "RAM", spread=-8.5, total=43.5, home=1),
     get_team_features(df, 2025, "SFO", spread=+8.5, total=43.5, home=0),
-    get_team_features(df, 2025, "CLE", spread=+4.5, total=36.5, home=1),
-    get_team_features(df, 2025, "MIN", spread=-4.5, total=36.5, home=0),
+    get_team_features(df, 2025, "CLE", spread=+3.5, total=36.5, home=1),
+    get_team_features(df, 2025, "MIN", spread=-3.5, total=36.5, home=0),
     get_team_features(df, 2025, "RAV", spread=+1.5, total=40.5, home=1),
     get_team_features(df, 2025, "HTX", spread=-1.5, total=40.5, home=0),
     get_team_features(df, 2025, "NOR", spread=-1.5, total=42.5, home=1),
