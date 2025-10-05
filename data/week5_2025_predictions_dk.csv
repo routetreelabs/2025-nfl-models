@@ -1,11 +1,11 @@
 Game,Spread,Total,Prediction,ConfidencePercent,AvgDistance,ConfidenceScore
 49ers @ Rams,-8.5,43.5,Over,0.571,0.214,44.9
 Vikings @ Browns,3.5,35.5,Over,0.571,0.904,5.5
-Broncos @ Eagles,-4.5,44.5,Over,0.714,0.286,51.0
-Raiders @ Colts,-7.0,47.5,Under,0.714,0.286,51.0
+Broncos @ Eagles,-3.5,44.5,Under,0.571,0.071,53.1
+Raiders @ Colts,-7.0,46.5,Over,0.714,0.429,40.8
 Giants @ Saints,-1.5,41.5,Under,0.857,0.143,73.5
-Texans @ Ravens,1.5,40.5,Under,0.714,0.429,40.8
-Cowboys @ Jets,1.5,47.5,Under,0.714,0.357,45.9
+Texans @ Ravens,2.5,40.5,Under,0.714,0.0,71.4
+Cowboys @ Jets,1.5,48.5,Over,0.714,0.429,40.8
 Dolphins @ Panthers,1.5,44.5,Under,0.857,0.143,73.5
 Buccaneers @ Seahawks,-3.5,44.5,Under,0.571,0.071,53.1
 Titans @ Cardinals,-7.5,41.5,Under,0.571,0.429,32.7
