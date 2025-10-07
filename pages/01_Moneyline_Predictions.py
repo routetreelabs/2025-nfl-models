@@ -157,10 +157,10 @@ week5_games_fd = [
     get_team_features(df, 2025, "WAS", spread=+2.5, total=47.5, home=0),
     get_team_features(df, 2025, "CIN", spread=+9.5, total=49.5, home=1),
     get_team_features(df, 2025, "DET", spread=-9.5, total=49.5, home=0),
-    get_team_features(df, 2025, "BUF", spread=-8.5, total=49.5, home=1),
-    get_team_features(df, 2025, "NWE", spread=+8.5, total=49.5, home=0),
-    get_team_features(df, 2025, "JAX", spread=+3.0, total=45.5, home=1),
-    get_team_features(df, 2025, "KAN", spread=-3.0, total=45.5, home=0)
+    get_team_features(df, 2025, "BUF", spread=-7.5, total=49.5, home=1),
+    get_team_features(df, 2025, "NWE", spread=+7.5, total=49.5, home=0),
+    get_team_features(df, 2025, "JAX", spread=+3.5, total=45.5, home=1),
+    get_team_features(df, 2025, "KAN", spread=-3.5, total=45.5, home=0)
 ]
 week5_df_fd = pd.DataFrame(week5_games_fd)
 
@@ -212,12 +212,12 @@ week5_games_dk = [
     get_team_features(df, 2025, "OTI", spread=+7.5, total=41.5, home=0),
     get_team_features(df, 2025, "SEA", spread=-3.5, total=44.5, home=1),
     get_team_features(df, 2025, "TAM", spread=+3.5, total=44.5, home=0),
-    get_team_features(df, 2025, "SDG", spread=-2.5, total=47.5, home=1),
-    get_team_features(df, 2025, "WAS", spread=+2.5, total=47.5, home=0),
+    get_team_features(df, 2025, "SDG", spread=-3.0, total=47.5, home=1),
+    get_team_features(df, 2025, "WAS", spread=+3.0, total=47.5, home=0),
     get_team_features(df, 2025, "CIN", spread=+10.5, total=49.5, home=1),
     get_team_features(df, 2025, "DET", spread=-10.5, total=49.5, home=0),
-    get_team_features(df, 2025, "BUF", spread=-8.5, total=49.5, home=1),
-    get_team_features(df, 2025, "NWE", spread=+8.5, total=49.5, home=0),
+    get_team_features(df, 2025, "BUF", spread=-7.5, total=49.5, home=1),
+    get_team_features(df, 2025, "NWE", spread=+7.5, total=49.5, home=0),
     get_team_features(df, 2025, "JAX", spread=+3.5, total=45.5, home=1),
     get_team_features(df, 2025, "KAN", spread=-3.5, total=45.5, home=0)
 ]

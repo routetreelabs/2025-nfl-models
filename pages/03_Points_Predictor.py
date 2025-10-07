@@ -126,8 +126,8 @@ week5_games_fd = [
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CRD", "Opp": "OTI", "Spread": -7.5, "Total": 41.5, "Last1": 20, "Roll3": 20.6, "Opp_Last1": 0, "Opp_Roll3": 13.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CIN", "Opp": "DET", "Spread": +9.5, "Total": 49.5, "Last1": 3, "Roll3": 14.6, "Opp_Last1": 34, "Opp_Roll3": 41.3},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "SDG", "Opp": "WAS", "Spread": -2.5, "Total": 47.5, "Last1": 18, "Roll3": 20.3, "Opp_Last1": 27, "Opp_Roll3": 28.6},
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "BUF", "Opp": "NWE", "Spread": -8.5, "Total": 49.5, "Last1": 31, "Roll3": 30.6, "Opp_Last1": 42, "Opp_Roll3": 29.6},
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "JAX", "Opp": "KAN", "Spread": +3.0, "Total": 45.5, "Last1": 26, "Roll3": 23.3, "Opp_Last1": 37, "Opp_Roll3": 25.3}
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "BUF", "Opp": "NWE", "Spread": -7.5, "Total": 49.5, "Last1": 31, "Roll3": 30.6, "Opp_Last1": 42, "Opp_Roll3": 29.6},
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "JAX", "Opp": "KAN", "Spread": +3.5, "Total": 45.5, "Last1": 26, "Roll3": 23.3, "Opp_Last1": 37, "Opp_Roll3": 25.3}
 ]
 
 # DraftKings
@@ -143,8 +143,8 @@ week5_games_dk = [
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "SEA", "Opp": "TAM", "Spread": -3.5, "Total": 44.5, "Last1": 23, "Roll3": 32.6, "Opp_Last1": 25, "Opp_Roll3": 24.6},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CRD", "Opp": "OTI", "Spread": -7.5, "Total": 41.5, "Last1": 20, "Roll3": 20.6, "Opp_Last1": 0, "Opp_Roll3": 13.0},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "CIN", "Opp": "DET", "Spread": +10.5, "Total": 49.5, "Last1": 3, "Roll3": 14.6, "Opp_Last1": 34, "Opp_Roll3": 41.3},
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "SDG", "Opp": "WAS", "Spread": -2.5, "Total": 47.5, "Last1": 18, "Roll3": 20.3, "Opp_Last1": 27, "Opp_Roll3": 28.6},
-    {"Season": 2025, "Week": 5, "Home": 1, "Team": "BUF", "Opp": "NWE", "Spread": -8.5, "Total": 49.5, "Last1": 31, "Roll3": 30.6, "Opp_Last1": 42, "Opp_Roll3": 29.6},
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "SDG", "Opp": "WAS", "Spread": -3.0, "Total": 47.5, "Last1": 18, "Roll3": 20.3, "Opp_Last1": 27, "Opp_Roll3": 28.6},
+    {"Season": 2025, "Week": 5, "Home": 1, "Team": "BUF", "Opp": "NWE", "Spread": -7.5, "Total": 49.5, "Last1": 31, "Roll3": 30.6, "Opp_Last1": 42, "Opp_Roll3": 29.6},
     {"Season": 2025, "Week": 5, "Home": 1, "Team": "JAX", "Opp": "KAN", "Spread": +3.5, "Total": 45.5, "Last1": 26, "Roll3": 23.3, "Opp_Last1": 37, "Opp_Roll3": 25.3}
 ]
 
