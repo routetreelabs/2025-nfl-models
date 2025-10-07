@@ -154,9 +154,16 @@ st.subheader("Week 5 Predictions – FanDuel Lines")
 if st.button("Run Week 5 Predictions – FanDuel"):
     team_preds_fd, game_preds_fd = predict_matchups(week5_games_fd)
     st.write("**Team-Level Predictions**")
-    st.dataframe(team_preds_fd.style.format({"Predicted_Points": "{:.2f}"}))
+    st.dataframe(team_preds_fd.style.format({
+        "Spread": "{:.1f}",
+        "Total": "{:.1f}",
+        "Roll3": "{:.2f}",
+        "Predicted_Points": "{:.2f}"
+    }))
     st.write("**Game-Level Predictions**")
     st.dataframe(game_preds_fd.style.format({
+        "Spread": "{:.1f}",
+        "Vegas_Total": "{:.1f}",
         "Home_Pred": "{:.2f}",
         "Away_Pred": "{:.2f}",
         "Predicted_Total": "{:.2f}"
@@ -168,9 +175,16 @@ st.subheader("Week 5 Predictions – DraftKings Lines")
 if st.button("Run Week 5 Predictions – DraftKings"):
     team_preds_dk, game_preds_dk = predict_matchups(week5_games_dk)
     st.write("**Team-Level Predictions**")
-    st.dataframe(team_preds_dk.style.format({"Predicted_Points": "{:.2f}"}))
+    st.dataframe(team_preds_dk.style.format({
+        "Spread": "{:.1f}",
+        "Total": "{:.1f}",
+        "Roll3": "{:.2f}",
+        "Predicted_Points": "{:.2f}"
+    }))
     st.write("**Game-Level Predictions**")
     st.dataframe(game_preds_dk.style.format({
+        "Spread": "{:.1f}",
+        "Vegas_Total": "{:.1f}",
         "Home_Pred": "{:.2f}",
         "Away_Pred": "{:.2f}",
         "Predicted_Total": "{:.2f}"
