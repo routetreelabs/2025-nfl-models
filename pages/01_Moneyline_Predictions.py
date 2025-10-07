@@ -18,6 +18,7 @@ st.markdown("**Week 2 Record:** Both models 11–5 ✅")
 st.markdown("**Week 3 Record:** FanDuel 12–4 ✅")
 st.markdown("**Week 3 Record:** DraftKings 11–5 ✅")
 st.markdown("**Week 4 Record:** Both models 10–5-1 ✅")
+st.markdown("**Week 5 Record:** Both models 7–7 ➖")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
