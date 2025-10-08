@@ -168,7 +168,7 @@ week6_games_fd = [
 ]
 week6_df_fd = pd.DataFrame(week6_games_fd)
 
-if st.button("Run Week 5 Predictions - FanDuel"):
+if st.button("Run Week 6 Predictions - FanDuel"):
     probs = model.predict_proba(week6_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
@@ -193,7 +193,7 @@ if st.button("Run Week 5 Predictions - FanDuel"):
 
 # DraftKings Predictions
 st.markdown("---")
-st.subheader("Week 5 Predictions - DraftKings Lines")
+st.subheader("Week 6 Predictions - DraftKings Lines")
 
 week6_games_dk = [
     get_team_features(df, 2025, "NYG", spread=+7.0, total=40.5, home=1),
