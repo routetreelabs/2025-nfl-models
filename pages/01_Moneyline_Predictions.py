@@ -23,8 +23,19 @@ st.markdown("**Week 6 Record:** Both models 9–6 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "datasets")
+
+# Universal dataset path
+DATA_DIR = os.path.join(os.getcwd(), "datasets")
 csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week6_copy.csv")
+
+# Optional: helpful debug info
+st.write("Looking for file at:", csv_path)
+st.write("File exists?", os.path.exists(csv_path))
+
+if not os.path.exists(csv_path):
+    st.error(f"Dataset not found: {csv_path}")
+    st.stop()
+
 
 # Load dataset
 df = pd.read_csv(csv_path)
