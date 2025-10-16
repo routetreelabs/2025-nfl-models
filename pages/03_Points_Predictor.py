@@ -14,7 +14,7 @@ st.title("Points Predictor – Linear Regression")
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "datasets")
-csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_Points_Week6_copy.csv")
+csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_Points_week6_copy.csv")
 
 # Load and Prepare the Data
 df = pd.read_csv(csv_path)
