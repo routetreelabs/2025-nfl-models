@@ -16,7 +16,7 @@ debug = st.checkbox("Debug mode (print intermediate variables)")
 
 # Universal dataset path
 DATA_DIR = os.path.join(os.getcwd(), "datasets")
-csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_Points_Week6_copy.csv")
+csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_Points_week6_copy.csv")
 
 # Optional: helpful debug info
 st.write("Looking for file at:", csv_path)
