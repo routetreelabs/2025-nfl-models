@@ -156,7 +156,7 @@ week8_games_fd = [
 ]
 
 # DraftKings
-week8_games = [
+week8_games_dk = [
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "SDG", "Opp": "MIN", "Spread": -3.0, "Total": 44.5, "Last1": 24, "Roll3": 21.0, "Roll5": 20.8, "Opp_Last1": 22, "Opp_Roll3": 21.3, "Opp_Roll5": 23.6},
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "CAR", "Opp": "BUF", "Spread": +7.0, "Total": 46.5, "Last1": 13, "Roll3": 23.3, "Roll5": 22.6, "Opp_Last1": 14, "Opp_Roll3": 21.6, "Opp_Roll5": 25.2},
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "PHI", "Opp": "NYG", "Spread": -7.5, "Total": 43.5, "Last1": 28, "Roll3": 20.6, "Roll5": 25.2, "Opp_Last1": 32, "Opp_Roll3": 26.6, "Opp_Roll5": 22.0},
