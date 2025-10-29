@@ -11,6 +11,11 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # Header
 st.title("NFL Points Predictor – Linear Regression")
 
+model_choice = st.radio(
+    "Select Model Version:",
+    ["Advanced Model (Full Features)", "Simpler Model (Rolling Averages Only)"]
+)
+
 debug = st.checkbox("Debug mode (print intermediate variables)")
 
 # Data
@@ -112,21 +117,27 @@ df["Spread_x_Roll3"] = df["Spread"] * df["Tm_Pts_Roll3"]
 df["Total_x_Roll3"] = df["Total"] * df["Tm_Pts_Roll3"]
 
 # Model Training
-features = [
-    "Season", "Week", "Home", "Team", "Opp",
-    "Spread", "Total",
-    "Tm_Pts_Last1","Tm_Pts_Roll3","Tm_Pts_Roll5",
-    "Opp_Pts_Allowed_Last1","Opp_Pts_Allowed_Roll3","Opp_Pts_Allowed_Roll5",
-    "Tm_YdsPerPlay_Roll3","Opp_YdsPerPlay_Roll3",
-    "Tm_3DConv_Rate_Roll3","Opp_3DConv_Rate_Roll3",
-    "ToP_Diff_Roll3","Tm_Pace_Roll3","Opp_Pace_Roll3",
-    "Tm_Home_Roll3","Tm_Away_Roll3",
-    "Spread_x_Roll3","Total_x_Roll3"
-]
-target = "Tm_Pts"
+# Feature & Model Setup
+if model_choice == "Advanced Model (Full Features)":
+    features = [
+        "Season", "Week", "Home", "Team", "Opp",
+        "Spread", "Total",
+        "Tm_Pts_Last1","Tm_Pts_Roll3","Tm_Pts_Roll5",
+        "Opp_Pts_Allowed_Last1","Opp_Pts_Allowed_Roll3","Opp_Pts_Allowed_Roll5",
+        "Tm_YdsPerPlay_Roll3","Opp_YdsPerPlay_Roll3",
+        "Tm_3DConv_Rate_Roll3","Opp_3DConv_Rate_Roll3",
+        "ToP_Diff_Roll3","Tm_Pace_Roll3","Opp_Pace_Roll3",
+        "Tm_Home_Roll3","Tm_Away_Roll3",
+        "Spread_x_Roll3","Total_x_Roll3"
+    ]
+else:
+    features = [
+        "Season", "Week", "Home", "Team", "Opp",
+        "Spread", "Total",
+        "Tm_Pts_Last1","Tm_Pts_Roll3","Tm_Pts_Roll5"
+    ]
 
-X = df[features]
-y = df[target]
+target = "Tm_Pts"
 
 categorical_features = ["Team", "Opp"]
 numerical_features = [c for c in features if c not in categorical_features]
@@ -136,8 +147,10 @@ preprocessor = ColumnTransformer(
     remainder="passthrough"
 )
 
-X_processed = preprocessor.fit_transform(X)
+X = df[features]
+y = df[target]
 
+X_processed = preprocessor.fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X_processed, y, test_size=0.2, random_state=42)
 model = LinearRegression()
 model.fit(X_train, y_train)
@@ -148,9 +161,11 @@ mae = mean_absolute_error(y_test, y_pred)
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 r2 = r2_score(y_test, y_pred)
 
+st.write(f"### Model Performance ({'Advanced' if model_choice.startswith('Advanced') else 'Simpler'} Model)")
 st.write(f"**R²:** {r2:.2f}")
 st.write(f"**MAE:** {mae:.2f}")
 st.write(f"**RMSE:** {rmse:.2f}")
+
 
 # Prediction Functions
 def predict_team_points(season, week, home, team, opponent, spread, total, last1, roll3, roll5):
