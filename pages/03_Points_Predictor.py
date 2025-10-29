@@ -211,7 +211,7 @@ def predict_matchups(matchups):
     return pd.DataFrame(team_results), pd.DataFrame(game_results)
 
 # DraftKings
-week8_games = [
+week8_games_dk = [
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "SDG", "Opp": "MIN", "Spread": -3.0, "Total": 44.5, "Last1": 24, "Roll3": 21.0, "Roll5": 20.8, "Opp_Last1": 22, "Opp_Roll3": 21.3, "Opp_Roll5": 23.6},
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "CAR", "Opp": "BUF", "Spread": +7.0, "Total": 47.5, "Last1": 13, "Roll3": 23.3, "Roll5": 22.6, "Opp_Last1": 14, "Opp_Roll3": 21.6, "Opp_Roll5": 25.2},
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "PHI", "Opp": "NYG", "Spread": -7.5, "Total": 43.5, "Last1": 28, "Roll3": 20.6, "Roll5": 25.2, "Opp_Last1": 32, "Opp_Roll3": 26.6, "Opp_Roll5": 22.0},
@@ -227,7 +227,7 @@ week8_games = [
     {"Season": 2025, "Week": 8, "Home": 1, "Team": "KAN", "Opp": "WAS", "Spread": -10.5, "Total": 48.5, "Last1": 31, "Roll3": 29.6, "Roll5": 29.6, "Opp_Last1": 22, "Opp_Roll3": 24.3, "Opp_Roll5": 28.2}
 ]
 
-team_predictions, game_predictions = predict_matchups(week8_games)
+team_predictions, game_predictions = predict_matchups(week8_games_dk)
 
 print("\nTeam-Level Predictions")
 print(team_predictions)
