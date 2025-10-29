@@ -382,7 +382,7 @@ week9_games_dk = [
 week9_df_dk = pd.DataFrame(week9_games_dk)
 
 if st.button("Run Week 9 Predictions - DraftKings"):
-    probs = model.predict_proba(week8_df_dk[features_avg])[:, 1]
+    probs = model.predict_proba(week9_df_dk[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
     results_dk = []
