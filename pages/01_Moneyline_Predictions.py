@@ -34,8 +34,6 @@ debug = st.checkbox("Debug mode (print intermediate variables)")
 DATA_DIR = os.path.join(os.getcwd(), "datasets")
 csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week7_copy.csv")
 
-st.write("Looking for file at:", csv_path)
-st.write("File exists?", os.path.exists(csv_path))
 
 if not os.path.exists(csv_path):
     st.error(f"Dataset not found: {csv_path}")
