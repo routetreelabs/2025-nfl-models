@@ -210,6 +210,56 @@ def predict_matchups(matchups):
         })
     return pd.DataFrame(team_results), pd.DataFrame(game_results)
 
+# DraftKings
+week8_games = [
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "SDG", "Opp": "MIN", "Spread": -3.0, "Total": 44.5, "Last1": 24, "Roll3": 21.0, "Roll5": 20.8, "Opp_Last1": 22, "Opp_Roll3": 21.3, "Opp_Roll5": 23.6},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CAR", "Opp": "BUF", "Spread": +7.0, "Total": 47.5, "Last1": 13, "Roll3": 23.3, "Roll5": 22.6, "Opp_Last1": 14, "Opp_Roll3": 21.6, "Opp_Roll5": 25.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "PHI", "Opp": "NYG", "Spread": -7.5, "Total": 43.5, "Last1": 28, "Roll3": 20.6, "Roll5": 25.2, "Opp_Last1": 32, "Opp_Roll3": 26.6, "Opp_Roll5": 22.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CIN", "Opp": "NYJ", "Spread": -5.5, "Total": 44.5, "Last1": 33, "Roll3": 25.0, "Roll5": 17.6, "Opp_Last1": 6, "Opp_Roll3": 13.0, "Opp_Roll5": 17.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "NWE", "Opp": "CLE", "Spread": -7.0, "Total": 40.5, "Last1": 31, "Roll3": 26.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 19.0, "Opp_Roll5": 16.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "RAV", "Opp": "CHI", "Spread": -2.5, "Total": 45.5, "Last1": 3, "Roll3": 11.0, "Roll5": 20.8, "Opp_Last1": 26, "Opp_Roll3": 25.3, "Opp_Roll5": 25.6},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "ATL", "Opp": "MIA", "Spread": -7.0, "Total": 44.5, "Last1": 10, "Roll3": 22.6, "Roll5": 18.0, "Opp_Last1": 6, "Opp_Roll3": 19.0, "Opp_Roll5": 21.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "HTX", "Opp": "SFO", "Spread": -2.5, "Total": 41.5, "Last1": 19, "Roll3": 29.6, "Roll5": 23.6, "Opp_Last1": 20, "Opp_Roll3": 21.6, "Opp_Roll5": 20.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "NOR", "Opp": "TAM", "Spread": +4.5, "Total": 46.5, "Last1": 14, "Roll3": 19.6, "Roll5": 18.2, "Opp_Last1": 9, "Opp_Roll3": 25.6, "Opp_Roll5": 26.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "DEN", "Opp": "DAL", "Spread": -3.5, "Total": 51.5, "Last1": 33, "Roll3": 22.3, "Roll5": 23.0, "Opp_Last1": 44, "Opp_Roll3": 36.0, "Opp_Roll5": 32.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CLT", "Opp": "OTI", "Spread": -14.5, "Total": 47.5, "Last1": 38, "Roll3": 36.3, "Roll5": 34.0, "Opp_Last1": 13, "Opp_Roll3": 15.0, "Opp_Roll5": 13.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "PIT", "Opp": "GNB", "Spread": +3.0, "Total": 45.5, "Last1": 31, "Roll3": 26.0, "Roll5": 23.2, "Opp_Last1": 27, "Opp_Roll3": 31.3, "Opp_Roll5": 26.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "KAN", "Opp": "WAS", "Spread": -10.5, "Total": 48.5, "Last1": 31, "Roll3": 29.6, "Roll5": 29.6, "Opp_Last1": 22, "Opp_Roll3": 24.3, "Opp_Roll5": 28.2}
+]
+
+team_predictions, game_predictions = predict_matchups(week8_games)
+
+print("\nTeam-Level Predictions")
+print(team_predictions)
+
+print("\nGame-Level Totals")
+print(game_predictions)
+
+# FanDuel
+week8_games_fd = [
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "SDG", "Opp": "MIN", "Spread": -3.0, "Total": 44.5, "Last1": 24, "Roll3": 21.0, "Roll5": 20.8, "Opp_Last1": 22, "Opp_Roll3": 21.3, "Opp_Roll5": 23.6},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CAR", "Opp": "BUF", "Spread": +7.5, "Total": 47.5, "Last1": 13, "Roll3": 23.3, "Roll5": 22.6, "Opp_Last1": 14, "Opp_Roll3": 21.6, "Opp_Roll5": 25.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "PHI", "Opp": "NYG", "Spread": -7.5, "Total": 43.5, "Last1": 28, "Roll3": 20.6, "Roll5": 25.2, "Opp_Last1": 32, "Opp_Roll3": 26.6, "Opp_Roll5": 22.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CIN", "Opp": "NYJ", "Spread": -5.5, "Total": 44.5, "Last1": 33, "Roll3": 25.0, "Roll5": 17.6, "Opp_Last1": 6, "Opp_Roll3": 13.0, "Opp_Roll5": 17.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "NWE", "Opp": "CLE", "Spread": -7.0, "Total": 40.5, "Last1": 31, "Roll3": 26.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 19.0, "Opp_Roll5": 16.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "RAV", "Opp": "CHI", "Spread": -2.5, "Total": 44.5, "Last1": 3, "Roll3": 11.0, "Roll5": 20.8, "Opp_Last1": 26, "Opp_Roll3": 25.3, "Opp_Roll5": 25.6},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "ATL", "Opp": "MIA", "Spread": -6.5, "Total": 44.5, "Last1": 10, "Roll3": 22.6, "Roll5": 18.0, "Opp_Last1": 6, "Opp_Roll3": 19.0, "Opp_Roll5": 21.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "HTX", "Opp": "SFO", "Spread": -2.5, "Total": 41.5, "Last1": 19, "Roll3": 29.6, "Roll5": 23.6, "Opp_Last1": 20, "Opp_Roll3": 21.6, "Opp_Roll5": 20.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "NOR", "Opp": "TAM", "Spread": +4.5, "Total": 46.5, "Last1": 14, "Roll3": 19.6, "Roll5": 18.2, "Opp_Last1": 9, "Opp_Roll3": 25.6, "Opp_Roll5": 26.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "DEN", "Opp": "DAL", "Spread": -3.5, "Total": 51.5, "Last1": 33, "Roll3": 22.3, "Roll5": 23.0, "Opp_Last1": 44, "Opp_Roll3": 36.0, "Opp_Roll5": 32.4},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "CLT", "Opp": "OTI", "Spread": -14.5, "Total": 47.5, "Last1": 38, "Roll3": 36.3, "Roll5": 34.0, "Opp_Last1": 13, "Opp_Roll3": 15.0, "Opp_Roll5": 13.0},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "PIT", "Opp": "GNB", "Spread": +2.5, "Total": 45.5, "Last1": 31, "Roll3": 26.0, "Roll5": 23.2, "Opp_Last1": 27, "Opp_Roll3": 31.3, "Opp_Roll5": 26.2},
+    {"Season": 2025, "Week": 8, "Home": 1, "Team": "KAN", "Opp": "WAS", "Spread": -10.5, "Total": 47.5, "Last1": 31, "Roll3": 29.6, "Roll5": 29.6, "Opp_Last1": 22, "Opp_Roll3": 24.3, "Opp_Roll5": 28.2}
+]
+
+team_predictions, game_predictions = predict_matchups(week8_games_fd)
+
+print("\nTeam-Level Predictions")
+print(team_predictions)
+
+print("\nGame-Level Totals")
+print(game_predictions)
+
 # FanDuel Predictions
 st.markdown("---")
 st.subheader("Week 8 Predictions – FanDuel Lines")
