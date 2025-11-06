@@ -20,12 +20,13 @@ st.markdown("""
 - Week 6: 9–6 ✅
 - Week 7: 9–6 ✅
 - Week 8: 6–7 ❌
+- Week 9: 7–7 ➖
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 # SET CURRENT WEEK HERE
-current_week = 9
+current_week = 10
 
 # Load DK predictions file
 pred_file = f"week{current_week}_2025_predictions_dk.csv"
