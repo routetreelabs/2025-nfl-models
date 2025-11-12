@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.title("FanDuel NFL Over/Under Predictions")
+st.title("FanDuel NFL Over/Under Predictions - KNN")
 
 # Display past records
 st.markdown("""
@@ -22,6 +22,7 @@ st.markdown("""
 - Week 7: 7–8 ❌
 - Week 8: 8–5 ✅
 - Week 9: 10–4 ✅
+- Week 10: 7–7 ➖
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")

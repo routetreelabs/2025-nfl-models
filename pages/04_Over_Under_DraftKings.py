@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.title("DraftKings NFL Over/Under Predictions")
+st.title("DraftKings NFL Over/Under Predictions - KNN")
 # Display past records
 st.markdown("""
 **Model Weekly Record:**
@@ -21,6 +21,7 @@ st.markdown("""
 - Week 7: 9–6 ✅
 - Week 8: 6–7 ❌
 - Week 9: 7–7 ➖
+- Week 10: 8–6 ✅
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")

@@ -15,7 +15,7 @@ from sklearn.metrics import (accuracy_score, classification_report, confusion_ma
 
 # UI Header / Weekly Records
 
-st.title("Moneyline Model – Logistic Regression)")
+st.title("Moneyline Model – Logistic Regression")
 st.markdown("**Week 1 Record:** Both models 14–2 ✅")
 st.markdown("**Week 2 Record:** Both models 11–5 ✅")
 st.markdown("**Week 3 Record:** FanDuel 12–4 ✅")
@@ -27,6 +27,7 @@ st.markdown("**Week 7 Record:** FanDuel 6–9 ❌")
 st.markdown("**Week 7 Record:** DraftKings 8–7 ✅")
 st.markdown("**Week 8 Record:** Both models 11–2 ✅")
 st.markdown("**Week 9 Record:** Both models 8–6 ✅")
+st.markdown("**Week 10 Record:** Both models 9–5 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
