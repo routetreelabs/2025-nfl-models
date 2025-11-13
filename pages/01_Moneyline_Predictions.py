@@ -34,7 +34,7 @@ debug = st.checkbox("Debug mode (print intermediate variables)")
 
 # Data
 DATA_DIR = os.path.join(os.getcwd(), "datasets")
-csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week9_copy.csv")
+csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week10_copy.csv")
 
 
 if not os.path.exists(csv_path):
@@ -268,70 +268,73 @@ def get_team_features(latest_df, season, team, spread, total, home, stat_cols_fo
     return f
 
 # Shared team list
-week10_teams = [
-    {"Home": "Broncos", "Away": "Raiders"},
-    {"Home": "Colts", "Away": "Falcons"},
-    {"Home": "Texans", "Away": "Jaguars"},
-    {"Home": "Bears", "Away": "Giants"},
-    {"Home": "Vikings", "Away": "Ravens"},
-    {"Home": "Jets", "Away": "Browns"},
-    {"Home": "Panthers", "Away": "Saints"},
-    {"Home": "Dolphins", "Away": "Bills"},
-    {"Home": "Buccaneers", "Away": "Patriots"},
-    {"Home": "Seahawks", "Away": "Cardinals"},
-    {"Home": "49ers", "Away": "Rams"},
-    {"Home": "Commanders", "Away": "Lions"},
-    {"Home": "Chargers", "Away": "Steelers"},
-    {"Home": "Packers", "Away": "Eagles"},
+week11_teams = [
+    {"Home": "Patriots", "Away": "Jets"},
+    {"Home": "Dolphins", "Away": "Commanders"},
+    {"Home": "Vikings", "Away": "Bears"},
+    {"Home": "Giants", "Away": "Packers"},
+    {"Home": "Falcons", "Away": "Panthers"},
+    {"Home": "Jaguars", "Away": "Chargers"},
+    {"Home": "Steelers", "Away": "Bengals"},
+    {"Home": "Bills", "Away": "Buccaneers"},
+    {"Home": "Titans", "Away": "Texans"},
+    {"Home": "Rams", "Away": "Seahawks"},
+    {"Home": "Cardinals", "Away": "49ers"},
+    {"Home": "Broncos", "Away": "Chiefs"},
+    {"Home": "Browns", "Away": "Ravens"},
+    {"Home": "Eagles", "Away": "Lions"},
+    {"Home": "Raiders", "Away": "Cowboys"},
 ]
 
 # Week x - FANDUEL
 
 st.markdown("---")
-st.subheader("Week 10 Predictions - FanDuel Lines")
+st.subheader("Week 11 Predictions - FanDuel Lines")
 
-week10_games_fd = [
-    get_team_features(df, 2025, "DEN", spread=-8.5, total=42.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAI", spread=+8.5, total=42.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLT", spread=-6.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "ATL", spread=+6.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "HTX", spread=-1.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "JAX", spread=+1.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CHI", spread=-4.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NYG", spread=+4.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAV", spread=-4.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "MIN", spread=+4.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NYJ", spread=+2.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLE", spread=-2.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CAR", spread=-5.5, total=38.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NOR", spread=+5.5, total=38.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "MIA", spread=+9.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "BUF", spread=-9.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "TAM", spread=-2.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NWE", spread=+2.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SEA", spread=-7.0, total=44.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CRD", spread=+7.0, total=44.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SFO", spread=+5.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAM", spread=-5.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "WAS", spread=+7.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "DET", spread=-7.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SDG", spread=-2.5, total=44.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "PIT", spread=+2.5, total=44.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "GNB", spread=-1.5, total=44.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "PHI", spread=+1.5, total=44.5, home=0, stat_cols_for_avg=stat_cols),
+week11_games_fd = [
+    get_team_features(df, 2025, "NWE", spread=-12.5, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "NYJ", spread=+12.5, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "MIA", spread=-2.5, total=47.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "WAS", spread=+2.5, total=47.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "MIN", spread=-3.0, total=47.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CHI", spread=+3.0, total=47.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "NYG", spread=+7.0, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "GNB", spread=-7.0, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "ATL", spread=-3.5, total=42.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CAR", spread=+3.5, total=42.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "JAX", spread=+3.0, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SDG", spread=-3.0, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "PIT", spread=-5.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CIN", spread=+5.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "BUF", spread=-5.5, total=47.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "TAM", spread=+5.5, total=47.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "OTI", spread=+6.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "HTX", spread=-6.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAM", spread=-3.0, total=48.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SEA", spread=+3.0, total=48.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CRD", spread=+3.0, total=47.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SFO", spread=-3.0, total=47.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DEN", spread=+3.5, total=44.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "KAN", spread=-3.5, total=44.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CLE", spread=+7.5, total=39.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAV", spread=-7.5, total=39.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "PHI", spread=-2.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DET", spread=+2.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAI", spread=+3.5, total=50.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DAL", spread=-3.5, total=50.5, home=0, stat_cols_for_avg=stat_cols),
 ]
 
-week10_df_fd = pd.DataFrame(week10_games_fd)
+week11_df_fd = pd.DataFrame(week11_games_fd)
 
 if st.button("Run Week 10 Predictions - FanDuel"):
-    probs = model.predict_proba(week10_df_fd[features_avg])[:, 1]
+    probs = model.predict_proba(week11_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
     results_fd = []
     for i in range(0, len(probs), 2):  # pair home/away
         game_index = i // 2
-        home = week10_teams[game_index]["Home"]
-        away = week10_teams[game_index]["Away"]
+        home = week11_teams[game_index]["Home"]
+        away = week11_teams[game_index]["Away"]
 
         prob = probs[i]  # Home team row
         pred = preds[i]  # 1 = home wins, 0 = away wins
@@ -348,50 +351,52 @@ if st.button("Run Week 10 Predictions - FanDuel"):
 
 # Week x - DRAFTKINGS
 st.markdown("---")
-st.subheader("Week 10 Predictions - DraftKings Lines")
+st.subheader("Week 11 Predictions - DraftKings Lines")
 
-week10_games_dk = [
-    get_team_features(df, 2025, "DEN", spread=-9.5, total=42.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAI", spread=+9.5, total=42.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLT", spread=-6.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "ATL", spread=+6.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "HTX", spread=-1.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "JAX", spread=+1.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CHI", spread=-4.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NYG", spread=+4.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAV", spread=-3.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "MIN", spread=+3.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NYJ", spread=+1.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLE", spread=-1.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CAR", spread=-5.5, total=38.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NOR", spread=+5.5, total=38.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "MIA", spread=+9.5, total=50.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "BUF", spread=-9.5, total=50.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "TAM", spread=-2.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "NWE", spread=+2.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SEA", spread=-7.0, total=45.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CRD", spread=+7.0, total=45.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SFO", spread=+6.0, total=49.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "RAM", spread=-6.0, total=49.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "WAS", spread=+8.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "DET", spread=-8.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SDG", spread=-3.0, total=45.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "PIT", spread=+3.0, total=45.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "GNB", spread=-1.5, total=45.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "PHI", spread=+1.5, total=45.5, home=0, stat_cols_for_avg=stat_cols),
+week11_games_dk = [
+    get_team_features(df, 2025, "NWE", spread=-12.5, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "NYJ", spread=+12.5, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "MIA", spread=-2.5, total=47.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "WAS", spread=+2.5, total=47.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "MIN", spread=-3.0, total=48.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CHI", spread=+3.0, total=48.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "NYG", spread=+7.0, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "GNB", spread=-7.0, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "ATL", spread=-3.5, total=42.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CAR", spread=+3.5, total=42.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "JAX", spread=+3.0, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SDG", spread=-3.0, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "PIT", spread=-5.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CIN", spread=+5.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "BUF", spread=-5.5, total=48.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "TAM", spread=+5.5, total=48.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "OTI", spread=+6.5, total=37.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "HTX", spread=-6.5, total=37.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAM", spread=-3.0, total=48.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SEA", spread=+3.0, total=48.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CRD", spread=+3.0, total=48.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SFO", spread=-3.0, total=48.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DEN", spread=+3.5, total=43.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "KAN", spread=-3.5, total=43.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CLE", spread=+7.5, total=39.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAV", spread=-7.5, total=39.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "PHI", spread=-2.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DET", spread=+2.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "RAI", spread=+3.5, total=50.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DAL", spread=-3.5, total=50.5, home=0, stat_cols_for_avg=stat_cols),
 ]
 
-week10_df_dk = pd.DataFrame(week10_games_dk)
+week11_df_dk = pd.DataFrame(week11_games_dk)
 
 if st.button("Run Week 10 Predictions - DraftKings"):
-    probs = model.predict_proba(week10_df_dk[features_avg])[:, 1]
+    probs = model.predict_proba(week11_df_dk[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
     results_dk = []
     for i in range(0, len(probs), 2):  # pair home/away
         game_index = i // 2
-        home = week10_teams[game_index]["Home"]
-        away = week10_teams[game_index]["Away"]
+        home = week11_teams[game_index]["Home"]
+        away = week11_teams[game_index]["Away"]
 
         prob = probs[i]  # Home team row
         pred = preds[i]  # 1 = home wins, 0 = away wins
