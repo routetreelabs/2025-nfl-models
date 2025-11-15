@@ -326,7 +326,7 @@ week11_games_fd = [
 
 week11_df_fd = pd.DataFrame(week11_games_fd)
 
-if st.button("Run Week 10 Predictions - FanDuel"):
+if st.button("Run Week 11 Predictions - FanDuel"):
     probs = model.predict_proba(week11_df_fd[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
@@ -388,7 +388,7 @@ week11_games_dk = [
 
 week11_df_dk = pd.DataFrame(week11_games_dk)
 
-if st.button("Run Week 10 Predictions - DraftKings"):
+if st.button("Run Week 11 Predictions - DraftKings"):
     probs = model.predict_proba(week11_df_dk[features_avg])[:, 1]
     preds = (probs >= 0.5).astype(int)
 
