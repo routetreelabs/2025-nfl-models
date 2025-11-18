@@ -28,6 +28,7 @@ st.markdown("**Week 7 Record:** DraftKings 8–7 ✅")
 st.markdown("**Week 8 Record:** Both models 11–2 ✅")
 st.markdown("**Week 9 Record:** Both models 8–6 ✅")
 st.markdown("**Week 10 Record:** Both models 9–5 ✅")
+st.markdown("**Week 11 Record:** Both models 11–4 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")
