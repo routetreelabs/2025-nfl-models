@@ -312,7 +312,7 @@ def run_weekly_ats_predictions(
 
 if __name__ == "__main__":
     # Example: train and run Week 12 predictions with hardcoded lines
-    csv_path = "nfl_gamelogs_vegas_2015-2025_ML_week11_copy.csv"
+    csv_path = "datasets/nfl_gamelogs_vegas_2015-2025_ML_week11_copy.csv"
 
     df, stat_cols, features_avg = load_and_engineer_ats_data(csv_path)
     model, metrics = train_ats_model(df, features_avg)
