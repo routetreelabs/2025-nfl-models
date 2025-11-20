@@ -99,13 +99,11 @@ def run_weekly_ats_predictions(model, df, season, week, matchups, stat_cols_for_
 
         all_preds.append({
             "Matchup": f"{team_name_map.get(away_team, away_team)} @ {team_name_map.get(home_team, home_team)}",
-            "Home Cover Probability": home_prob,
-            "Home Team Spread": spread,
+            "Spread (Home Team)": spread,
+            "Home Cover Probability": f"{home_prob:.2%}",
             "Predicted ATS Winner": team_name_map.get(ats_winner, ats_winner)
         })
-
-    results_df = pd.DataFrame(all_preds)
-    return results_df.sort_values("Home Cover Probability", ascending=False).reset_index(drop=True)
+    return pd.DataFrame(all_preds)
 
 
 # Week 12 Matchups
