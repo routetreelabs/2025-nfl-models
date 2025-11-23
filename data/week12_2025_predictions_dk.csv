@@ -1,15 +1,15 @@
 Game,Spread,Total,Prediction,ConfidencePercent,AvgDistance,ConfidenceScore
 Bills @ Texans,5.5,43.5,Under,0.571,0.429,32.7
 Colts @ Chiefs,-3.5,50.5,Over,0.714,0.357,45.9
-Patriots @ Bengals,7.0,50.5,Under,0.714,0.589,29.4
-Steelers @ Bears,-2.5,45.5,Over,0.571,0.0,57.1
-Jets @ Ravens,-13.5,44.5,Under,0.714,0.488,36.6
-Seahawks @ Titans,13.5,40.5,Over,0.571,2.068,-61.0
-Giants @ Lions,-10.5,50.5,Under,0.571,0.648,20.1
+Patriots @ Bengals,7.5,50.5,Under,0.857,0.488,43.9
+Steelers @ Bears,-2.5,47.5,Over,0.714,0.143,61.2
+Jets @ Ravens,-14.0,44.5,Over,0.714,0.5,35.7
+Seahawks @ Titans,12.5,40.5,Over,0.857,1.913,-78.3
+Giants @ Lions,-13.5,50.5,Over,0.571,1.176,-10.1
 Vikings @ Packers,-6.5,41.5,Under,0.571,0.286,40.8
-Browns @ Raiders,-3.5,36.5,Under,0.857,0.214,67.3
-Jaguars @ Cardinals,3.0,47.5,Under,0.571,0.0,57.1
-Falcons @ Saints,-1.5,39.5,Over,0.571,0.618,21.8
+Browns @ Raiders,-3.5,35.5,Under,0.714,0.714,20.4
+Jaguars @ Cardinals,2.5,47.5,Under,0.857,0.357,55.1
+Falcons @ Saints,-1.5,40.5,Over,0.571,0.559,25.2
 Eagles @ Cowboys,3.0,47.5,Under,0.571,0.0,57.1
-Buccaneers @ Rams,-6.5,49.5,Under,0.571,0.357,36.7
-Panthers @ 49ers,-7.0,48.5,Under,0.714,0.357,45.9
+Buccaneers @ Rams,-7.0,49.5,Over,0.571,0.214,44.9
+Panthers @ 49ers,-7.5,49.5,Over,0.857,0.357,55.1
