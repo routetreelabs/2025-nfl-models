@@ -15,5 +15,6 @@ Welcome! Choose a model from the left sidebar:
 - **Moneyline Predictions** (Logistic Regression)
 - **Over/Under Predictions** (K-Nearest Neighbors)
 - **Points Predictor** (Linear Regression)
+- **Against the Spread** (Logistic Regression)
 """)
 
