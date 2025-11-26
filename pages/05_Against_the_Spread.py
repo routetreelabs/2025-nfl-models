@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
 
 st.title("Against the Spread (ATS) Predictions")
+st.markdown("**Week 12 Record:** Both models 10–4 ✅")
 
 # Load data
 df = pd.read_csv("datasets/nfl_gamelogs_vegas_2015-2025_ML_week11_copy.csv")
