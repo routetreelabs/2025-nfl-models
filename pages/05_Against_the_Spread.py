@@ -108,47 +108,51 @@ def run_weekly_ats_predictions(model, df, season, week, matchups, stat_cols_for_
 
 
 # Week 12 Matchups
-season, week = 2025, 12
+season, week = 2025, 13
 
-week12_games_fd = [
-    ("HTX", "BUF", +5.5, 43.5),
-    ("KAN", "CLT", -3.5, 49.5),
-    ("CIN", "NWE", +7.5, 50.5),
-    ("CHI", "PIT", -2.5, 46.5),
-    ("RAV", "NYJ", -13.5, 45.5),
-    ("OTI", "SEA", +12.5, 41.5),
-    ("DET", "NYG", -13.5, 50.5),
-    ("GNB", "MIN", -6.5, 41.5),
-    ("RAI", "CLE", -3.5, 36.5),
-    ("CRD", "JAX", +2.5, 46.5),
-    ("NOR", "ATL", -1.5, 40.5),
-    ("DAL", "PHI", +3.0, 47.5),
-    ("RAM", "TAM", -7.0, 49.5),
-    ("SFO", "CAR", -7.5, 49.5),
+week13_games_fd = [
+    ("DET", "GNB", -3.0, 48.5),
+    ("DAL", "KAN", +3.5, 52.5),
+    ("RAV", "CIN", -7.0, 51.5),
+    ("PHI", "CHI", -7.0, 44.5),
+    ("CAR", "RAM", +10.5, 45.5),
+    ("TAM", "CRD", -2.5, 43.5),
+    ("OTI", "JAX", +6.5, 41.5),
+    ("MIA", "NOR", -5.5, 42.5),
+    ("CLE", "SFO", +5.5, 36.5),
+    ("NYJ", "ATL", +2.5, 39.5),
+    ("CLT", "HTX", -4.5, 44.5),
+    ("SEA", "MIN", -11.5, 41.5),
+    ("PIT", "BUF", +3.5, 46.5),
+    ("SDG", "RAI", -9.5, 41.5),
+    ("WAS", "DEN", +5.5, 43.5),
+    ("NWE", "NYG", -7.5, 46.5),
 ]
 
-week12_games_dk = [
-    ("HTX", "BUF", +6.0, 43.5),
-    ("KAN", "CLT", -3.5, 50.5),
-    ("CIN", "NWE", +7.5, 50.5),
-    ("CHI", "PIT", -2.5, 47.5),
-    ("RAV", "NYJ", -14.0, 44.5),
-    ("OTI", "SEA", +12.5, 41.5),
-    ("DET", "NYG", -13.5, 51.5),
-    ("GNB", "MIN", -6.5, 41.5),
-    ("RAI", "CLE", -3.5, 35.5),
-    ("CRD", "JAX", +2.5, 47.5),
-    ("NOR", "ATL", -1.5, 40.5),
-    ("DAL", "PHI", +3.0, 47.5),
-    ("RAM", "TAM", -7.0, 49.5),
-    ("SFO", "CAR", -7.5, 49.5),
+week13_games_dk = [
+    ("DET", "GNB", -2.5, 48.5),
+    ("DAL", "KAN", +3.5, 52.5),
+    ("RAV", "CIN", -7.0, 51.5),
+    ("PHI", "CHI", -7.0, 44.5),
+    ("CAR", "RAM", +10.0, 44.5),
+    ("TAM", "CRD", -2.5, 43.5),
+    ("OTI", "JAX", +6.5, 41.5),
+    ("MIA", "NOR", -5.5, 42.5),
+    ("CLE", "SFO", +4.5, 36.5),
+    ("NYJ", "ATL", +2.5, 39.5),
+    ("CLT", "HTX", -4.5, 44.5),
+    ("SEA", "MIN", -11.5, 41.5),
+    ("PIT", "BUF", +3.5, 46.5),
+    ("SDG", "RAI", -9.5, 40.5),
+    ("WAS", "DEN", +5.5, 43.5),
+    ("NWE", "NYG", -7.5, 46.5),
 ]
 
 # Display Predictions
-st.subheader("FanDuel Lines - Week 12 ATS Predictions")
-ats_fd = run_weekly_ats_predictions(ats_model, df, season, week, week12_games_fd, stat_cols)
+st.subheader("FanDuel Lines - Week 13 ATS Predictions")
+ats_fd = run_weekly_ats_predictions(ats_model, df, season, week, week13_games_fd, stat_cols)
 st.dataframe(ats_fd, use_container_width=True)
 
-st.subheader("DraftKings Lines - Week 12 ATS Predictions")
-ats_dk = run_weekly_ats_predictions(ats_model, df, season, week, week12_games_dk, stat_cols)
+st.subheader("DraftKings Lines - Week 13 ATS Predictions")
+ats_dk = run_weekly_ats_predictions(ats_model, df, season, week, week13_games_dk, stat_cols)
 st.dataframe(ats_dk, use_container_width=True)
