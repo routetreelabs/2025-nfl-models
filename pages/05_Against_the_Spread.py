@@ -63,6 +63,7 @@ team_name_map = {
     "CRD": "Cardinals", "JAX": "Jaguars", "NOR": "Saints", "ATL": "Falcons",
     "DAL": "Cowboys", "PHI": "Eagles", "RAM": "Rams", "TAM": "Buccaneers",
     "SFO": "49ers", "CAR": "Panthers", "HTX": "Texans", "BUF": "Bills", "WAS": "Commanders",
+    "DEN": "Broncos", "SDG": "Chargers"
 }
 
 
