@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score
 
-st.title("Against the Spread (ATS) Predictions")
+st.title("Against the Spread (ATS) Model - Logistic Regression")
 st.markdown("**Week 12 Record:** Both models 10–4 ✅")
 
 # Load data
