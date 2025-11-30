@@ -214,7 +214,7 @@ week13_games_fd = [
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "DAL", "Opp": "KAN", "Spread": +3.5, "Total": 52.5, "Last1": 24, "Roll3": 24.7, "Roll5": 28.4, "Opp_Last1": 23, "Opp_Roll3": 21.0, "Opp_Roll5": 24.4},
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "RAV", "Opp": "CIN", "Spread": -7.5, "Total": 51.5, "Last1": 23, "Roll3": 24.3, "Roll5": 26.2, "Opp_Last1": 20, "Opp_Roll3": 24.7, "Opp_Roll5": 29.0},
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "PHI", "Opp": "CHI", "Spread": -7.0, "Total": 43.5, "Last1": 21, "Roll3": 15.7, "Roll5": 22.6, "Opp_Last1": 31, "Opp_Roll3": 24.7, "Opp_Roll5": 27.4},
-    {"Season": 2025, "Week": 13, "Home": 1, "Team": "CAR", "Opp": "RAM", "Spread": +10.5, "Total": 44.5, "Last1": 9, "Roll3": 15.3, "Roll5": 14.2, "Opp_Last1": 34, "Opp_Roll3": 32.3, "Opp_Roll5": 33.2},
+    {"Season": 2025, "Week": 13, "Home": 1, "Team": "CAR", "Opp": "RAM", "Spread": +9.5, "Total": 44.5, "Last1": 9, "Roll3": 15.3, "Roll5": 14.2, "Opp_Last1": 34, "Opp_Roll3": 32.3, "Opp_Roll5": 33.2},
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "TAM", "Opp": "CRD", "Spread": -3.5, "Total": 44.5, "Last1": 7, "Roll3": 20.7, "Roll5": 18.8, "Opp_Last1": 24, "Opp_Roll3": 22.7, "Opp_Roll5": 23.6},
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "OTI", "Opp": "JAX", "Spread": +5.5, "Total": 42.5, "Last1": 24, "Roll3": 19.0, "Roll5": 16.8, "Opp_Last1": 27, "Opp_Roll3": 30.3, "Opp_Roll5": 25.6},
     {"Season": 2025, "Week": 13, "Home": 1, "Team": "MIA", "Opp": "NOR", "Spread": -5.5, "Total": 41.5, "Last1": 16, "Roll3": 17.3, "Roll5": 18.4, "Opp_Last1": 10, "Opp_Roll3": 12.3, "Opp_Roll5": 10.8},
