@@ -1,5 +1,5 @@
 Game,Spread,Total,Prediction,ConfidencePercent,AvgDistance,ConfidenceScore
-Cowboys @ Lions,-3.0,53.5,Under,0.571,0.143,49.0
+Cowboys @ Lions,-3.5,54.5,Over,0.714,0.357,45.9
 Dolphins @ Jets,2.5,41.5,Under,0.857,0.0,85.7
 Seahawks @ Falcons,7.5,43.5,Under,0.571,0.286,40.8
 Saints @ Buccaneers,-8.5,42.5,Under,0.857,0.357,55.1

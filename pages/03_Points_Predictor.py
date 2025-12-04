@@ -210,7 +210,7 @@ def predict_matchups(matchups):
 
 # FanDuel
 week14_games_fd = [
-    {"Season": 2025, "Week": 14, "Home": 1, "Team": "DET", "Opp": "DAL", "Spread": -3.0, "Total": 54.5, "Last1": 24, "Roll3": 22.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 29.3, "Opp_Roll5": 25.8},
+    {"Season": 2025, "Week": 14, "Home": 1, "Team": "DET", "Opp": "DAL", "Spread": -3.5, "Total": 54.5, "Last1": 24, "Roll3": 22.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 29.3, "Opp_Roll5": 25.8},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "NYJ", "Opp": "MIA", "Spread": +3.0, "Total": 41.5, "Last1": 27, "Roll3": 17.0, "Roll5": 23.4, "Opp_Last1": 21, "Opp_Roll3": 22.3, "Opp_Roll5": 21.4},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "ATL", "Opp": "SEA", "Spread": +7.5, "Total": 44.5, "Last1": 24, "Roll3": 25.0, "Roll5": 24.6, "Opp_Last1": 26, "Opp_Roll3": 25.0, "Opp_Roll5": 31.4},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "TAM", "Opp": "NOR", "Spread": -8.5, "Total": 42.5, "Last1": 20, "Roll3": 19.7, "Roll5": 21.0, "Opp_Last1": 17, "Opp_Roll3": 14.7, "Opp_Roll5": 11.4},
@@ -228,7 +228,7 @@ week14_games_fd = [
 
 # DraftKings
 week14_games_dk = [
-    {"Season": 2025, "Week": 14, "Home": 1, "Team": "DET", "Opp": "DAL", "Spread": -3.0, "Total": 54.5, "Last1": 24, "Roll3": 22.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 29.3, "Opp_Roll5": 25.8},
+    {"Season": 2025, "Week": 14, "Home": 1, "Team": "DET", "Opp": "DAL", "Spread": -3.5, "Total": 54.5, "Last1": 24, "Roll3": 22.3, "Roll5": 27.0, "Opp_Last1": 31, "Opp_Roll3": 29.3, "Opp_Roll5": 25.8},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "NYJ", "Opp": "MIA", "Spread": +2.5, "Total": 40.5, "Last1": 27, "Roll3": 17.0, "Roll5": 23.4, "Opp_Last1": 21, "Opp_Roll3": 22.3, "Opp_Roll5": 21.4},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "ATL", "Opp": "SEA", "Spread": +7.0, "Total": 44.5, "Last1": 24, "Roll3": 25.0, "Roll5": 24.6, "Opp_Last1": 26, "Opp_Roll3": 25.0, "Opp_Roll5": 31.4},
     {"Season": 2025, "Week": 14, "Home": 1, "Team": "TAM", "Opp": "NOR", "Spread": -8.5, "Total": 42.5, "Last1": 20, "Roll3": 19.7, "Roll5": 21.0, "Opp_Last1": 17, "Opp_Roll3": 14.7, "Opp_Roll5": 11.4},

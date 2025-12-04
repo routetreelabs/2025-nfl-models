@@ -294,8 +294,8 @@ st.markdown("---")
 st.subheader("Week 14 Predictions - FanDuel Lines")
 
 week14_games_fd = [
-    get_team_features(df, 2025, "DET", spread=-3.0, total=54.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "DAL", spread=+3.0, total=54.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DET", spread=-3.5, total=54.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DAL", spread=+3.5, total=54.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "NYJ", spread=+3.0, total=41.5, home=1, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "MIA", spread=-3.0, total=41.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "ATL", spread=+7.5, total=44.5, home=1, stat_cols_for_avg=stat_cols),
@@ -354,8 +354,8 @@ st.markdown("---")
 st.subheader("Week 14 Predictions - DraftKings Lines")
 
 week14_games_dk = [
-    get_team_features(df, 2025, "DET", spread=-3.0, total=53.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "DAL", spread=+3.0, total=53.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DET", spread=-3.5, total=54.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "DAL", spread=+3.5, total=54.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "NYJ", spread=+2.5, total=41.5, home=1, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "MIA", spread=-2.5, total=41.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "ATL", spread=+7.5, total=43.5, home=1, stat_cols_for_avg=stat_cols),

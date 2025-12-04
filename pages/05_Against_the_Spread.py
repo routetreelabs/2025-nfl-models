@@ -113,7 +113,7 @@ def run_weekly_ats_predictions(model, df, season, week, matchups, stat_cols_for_
 season, week = 2025, 14
 
 week14_games_fd = [
-    ("DET", "DAL", -3.0, 54.5),
+    ("DET", "DAL", -3.5, 54.5),
     ("NYJ", "MIA", +3.0, 41.5),
     ("ATL", "SEA", +7.5, 44.5),
     ("TAM", "NOR", -8.5, 42.5),
@@ -130,7 +130,7 @@ week14_games_fd = [
 ]
 
 week14_games_dk = [
-    ("DET", "DAL", -3.0, 53.5),
+    ("DET", "DAL", -3.5, 54.5),
     ("NYJ", "MIA", +2.5, 41.5),
     ("ATL", "SEA", +7.5, 43.5),
     ("TAM", "NOR", -8.5, 42.5),
