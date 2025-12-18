@@ -210,8 +210,8 @@ def predict_matchups(matchups):
 
 # FanDuel
 week16_games_fd = [
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "SEA", "Opp": "RAM", "Spread": +1.5, "Total": 42.5, "Last1": 18, "Roll3": 27.0, "Roll5": 26.0, "Opp_Last1": 41, "Opp_Roll3": 38.0, "Opp_Roll5": 33.8},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "WAS", "Opp": "PHI", "Spread": +6.5, "Total": 44.5, "Last1": 29, "Roll3": 18.3, "Roll5": 18.0, "Opp_Last1": 31, "Opp_Roll3": 21.7, "Opp_Roll5": 20.4},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "SEA", "Opp": "RAM", "Spread": -1.5, "Total": 42.5, "Last1": 18, "Roll3": 27.0, "Roll5": 26.0, "Opp_Last1": 41, "Opp_Roll3": 38.0, "Opp_Roll5": 33.8},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "WAS", "Opp": "PHI", "Spread": +7.0, "Total": 44.5, "Last1": 29, "Roll3": 18.3, "Roll5": 18.0, "Opp_Last1": 31, "Opp_Roll3": 21.7, "Opp_Roll5": 20.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "CHI", "Opp": "GNB", "Spread": +1.5, "Total": 46.5, "Last1": 31, "Roll3": 25.3, "Roll5": 25.2, "Opp_Last1": 26, "Opp_Roll3": 28.3, "Opp_Roll5": 27.0},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "DAL", "Opp": "SDG", "Spread": -2.5, "Total": 49.5, "Last1": 26, "Roll3": 29.0, "Roll5": 28.8, "Opp_Last1": 16, "Opp_Roll3": 23.0, "Opp_Roll5": 20.0},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "NYG", "Opp": "MIN", "Spread": +2.5, "Total": 43.5, "Last1": 21, "Roll3": 21.0, "Roll5": 20.6, "Opp_Last1": 34, "Opp_Roll3": 21.7, "Opp_Roll5": 17.6},
@@ -225,27 +225,27 @@ week16_games_fd = [
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "DET", "Opp": "PIT", "Spread": -6.5, "Total": 51.5, "Last1": 34, "Roll3": 34.0, "Roll5": 29.0, "Opp_Last1": 28, "Opp_Roll3": 20.7, "Opp_Roll5": 24.8},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "HTX", "Opp": "RAI", "Spread": -14.5, "Total": 37.5, "Last1": 40, "Roll3": 26.7, "Roll5": 23.8, "Opp_Last1": 0, "Opp_Roll3": 10.3, "Opp_Roll5": 11.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "RAV", "Opp": "NWE", "Spread": -2.5, "Total": 47.5, "Last1": 24, "Roll3": 20.0, "Roll5": 21.2, "Opp_Last1": 31, "Opp_Roll3": 30.0, "Opp_Roll5": 29.0},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +6.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +5.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
 ]
 
 # DraftKings
 week16_games_dk = [
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "SEA", "Opp": "RAM", "Spread": -1.5, "Total": 42.5, "Last1": 18, "Roll3": 27.0, "Roll5": 26.0, "Opp_Last1": 41, "Opp_Roll3": 38.0, "Opp_Roll5": 33.8},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "WAS", "Opp": "PHI", "Spread": +6.5, "Total": 44.5, "Last1": 29, "Roll3": 18.3, "Roll5": 18.0, "Opp_Last1": 31, "Opp_Roll3": 21.7, "Opp_Roll5": 20.4},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "WAS", "Opp": "PHI", "Spread": +7.0, "Total": 44.5, "Last1": 29, "Roll3": 18.3, "Roll5": 18.0, "Opp_Last1": 31, "Opp_Roll3": 21.7, "Opp_Roll5": 20.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "CHI", "Opp": "GNB", "Spread": +1.5, "Total": 46.5, "Last1": 31, "Roll3": 25.3, "Roll5": 25.2, "Opp_Last1": 26, "Opp_Roll3": 28.3, "Opp_Roll5": 27.0},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "DAL", "Opp": "SDG", "Spread": -2.5, "Total": 49.5, "Last1": 26, "Roll3": 29.0, "Roll5": 28.8, "Opp_Last1": 16, "Opp_Roll3": 23.0, "Opp_Roll5": 20.0},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "DAL", "Opp": "SDG", "Spread": -1.5, "Total": 49.5, "Last1": 26, "Roll3": 29.0, "Roll5": 28.8, "Opp_Last1": 16, "Opp_Roll3": 23.0, "Opp_Roll5": 20.0},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "NYG", "Opp": "MIN", "Spread": +3.0, "Total": 43.5, "Last1": 21, "Roll3": 21.0, "Roll5": 20.6, "Opp_Last1": 34, "Opp_Roll3": 21.7, "Opp_Roll5": 17.6},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLE", "Opp": "BUF", "Spread": +10.0, "Total": 42.5, "Last1": 3, "Roll3": 13.3, "Roll5": 16.0, "Opp_Last1": 35, "Opp_Roll3": 33.3, "Opp_Roll5": 32.6},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "NOR", "Opp": "NYJ", "Spread": -4.5, "Total": 40.5, "Last1": 20, "Roll3": 20.3, "Roll5": 17.6, "Opp_Last1": 20, "Opp_Roll3": 19.0, "Opp_Roll5": 16.2},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLE", "Opp": "BUF", "Spread": +10.5, "Total": 41.5, "Last1": 3, "Roll3": 13.3, "Roll5": 16.0, "Opp_Last1": 35, "Opp_Roll3": 33.3, "Opp_Roll5": 32.6},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "NOR", "Opp": "NYJ", "Spread": -5.5, "Total": 40.5, "Last1": 20, "Roll3": 20.3, "Roll5": 17.6, "Opp_Last1": 20, "Opp_Roll3": 19.0, "Opp_Roll5": 16.2},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "CAR", "Opp": "TAM", "Spread": +3.0, "Total": 45.5, "Last1": 17, "Roll3": 19.0, "Roll5": 18.8, "Opp_Last1": 28, "Opp_Roll3": 22.7, "Opp_Roll5": 21.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "MIA", "Opp": "CIN", "Spread": +4.5, "Total": 47.5, "Last1": 15, "Roll3": 23.3, "Roll5": 23.2, "Opp_Last1": 0, "Opp_Roll3": 22.0, "Opp_Roll5": 19.6},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "OTI", "Opp": "KAN", "Spread": +3.5, "Total": 37.5, "Last1": 24, "Roll3": 19.3, "Roll5": 19.0, "Opp_Last1": 13, "Opp_Roll3": 17.0, "Opp_Roll5": 18.6},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "DEN", "Opp": "JAX", "Spread": -3.0, "Total": 46.5, "Last1": 34, "Roll3": 28.3, "Roll5": 23.4, "Opp_Last1": 48, "Opp_Roll3": 36.3, "Opp_Roll5": 34.2},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "OTI", "Opp": "KAN", "Spread": +3.0, "Total": 37.5, "Last1": 24, "Roll3": 19.3, "Roll5": 19.0, "Opp_Last1": 13, "Opp_Roll3": 17.0, "Opp_Roll5": 18.6},
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "DEN", "Opp": "JAX", "Spread": -3.0, "Total": 47.5, "Last1": 34, "Roll3": 28.3, "Roll5": 23.4, "Opp_Last1": 48, "Opp_Roll3": 36.3, "Opp_Roll5": 34.2},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "CRD", "Opp": "ATL", "Spread": +3.0, "Total": 48.5, "Last1": 20, "Roll3": 18.0, "Roll5": 20.0, "Opp_Last1": 29, "Opp_Roll3": 20.7, "Opp_Roll5": 22.6},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "DET", "Opp": "PIT", "Spread": -7.0, "Total": 51.5, "Last1": 34, "Roll3": 34.0, "Roll5": 29.0, "Opp_Last1": 28, "Opp_Roll3": 20.7, "Opp_Roll5": 24.8},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "HTX", "Opp": "RAI", "Spread": -14.5, "Total": 37.5, "Last1": 40, "Roll3": 26.7, "Roll5": 23.8, "Opp_Last1": 0, "Opp_Roll3": 10.3, "Opp_Roll5": 11.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "RAV", "Opp": "NWE", "Spread": -3.0, "Total": 48.5, "Last1": 24, "Roll3": 20.0, "Roll5": 21.2, "Opp_Last1": 31, "Opp_Roll3": 30.0, "Opp_Roll5": 29.0},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +6.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +5.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
 ]
 
 # Streamlit Display

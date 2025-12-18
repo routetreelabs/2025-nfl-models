@@ -116,8 +116,8 @@ def run_weekly_ats_predictions(model, df, season, week, matchups, stat_cols_for_
 season, week = 2025, 16
 
 week16_games_fd = [
-    ("SEA", "RAM", +1.5, 42.5),
-    ("WAS", "PHI", +6.5, 44.5),
+    ("SEA", "RAM", -1.5, 42.5),
+    ("WAS", "PHI", +7.0, 44.5),
     ("CHI", "GNB", +1.5, 46.5),
     ("DAL", "SDG", -2.5, 49.5),
     ("NYG", "MIN", +2.5, 43.5),
@@ -131,26 +131,26 @@ week16_games_fd = [
     ("DET", "PIT", -6.5, 51.5),
     ("HTX", "RAI", -14.5, 37.5),
     ("RAV", "NWE", -2.5, 47.5),
-    ("CLT", "SFO", +6.5, 46.5),
+    ("CLT", "SFO", +5.5, 46.5),
 ]
 
 week16_games_dk = [
     ("SEA", "RAM", -1.5, 42.5),
-    ("WAS", "PHI", +6.5, 44.5),
+    ("WAS", "PHI", +7.0, 44.5),
     ("CHI", "GNB", +1.5, 46.5),
-    ("DAL", "SDG", -2.5, 49.5),
+    ("DAL", "SDG", -1.5, 49.5),
     ("NYG", "MIN", +3.0, 43.5),
-    ("CLE", "BUF", +10.0, 42.5),
-    ("NOR", "NYJ", -4.5, 40.5),
+    ("CLE", "BUF", +10.5, 41.5),
+    ("NOR", "NYJ", -5.5, 40.5),
     ("CAR", "TAM", +3.0, 45.5),
     ("MIA", "CIN", +4.5, 47.5),
     ("OTI", "KAN", +3.0, 37.5),
-    ("DEN", "JAX", -3.0, 46.5),
+    ("DEN", "JAX", -3.0, 47.5),
     ("CRD", "ATL", +3.0, 48.5),
     ("DET", "PIT", -7.0, 51.5),
     ("HTX", "RAI", -14.5, 37.5),
     ("RAV", "NWE", -3.0, 48.5),
-    ("CLT", "SFO", +6.5, 46.5),
+    ("CLT", "SFO", +5.5, 46.5),
 ]
 
 # Display Predictions
