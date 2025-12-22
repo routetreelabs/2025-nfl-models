@@ -225,7 +225,7 @@ week16_games_fd = [
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "DET", "Opp": "PIT", "Spread": -7.0, "Total": 51.5, "Last1": 34, "Roll3": 34.0, "Roll5": 29.0, "Opp_Last1": 28, "Opp_Roll3": 20.7, "Opp_Roll5": 24.8},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "HTX", "Opp": "RAI", "Spread": -14.5, "Total": 38.5, "Last1": 40, "Roll3": 26.7, "Roll5": 23.8, "Opp_Last1": 0, "Opp_Roll3": 10.3, "Opp_Roll5": 11.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "RAV", "Opp": "NWE", "Spread": -3.5, "Total": 48.5, "Last1": 24, "Roll3": 20.0, "Roll5": 21.2, "Opp_Last1": 31, "Opp_Roll3": 30.0, "Opp_Roll5": 29.0},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +5.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +4.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
 ]
 
 # DraftKings
@@ -245,7 +245,7 @@ week16_games_dk = [
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "DET", "Opp": "PIT", "Spread": -7.5, "Total": 52.5, "Last1": 34, "Roll3": 34.0, "Roll5": 29.0, "Opp_Last1": 28, "Opp_Roll3": 20.7, "Opp_Roll5": 24.8},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "HTX", "Opp": "RAI", "Spread": -14.0, "Total": 39.5, "Last1": 40, "Roll3": 26.7, "Roll5": 23.8, "Opp_Last1": 0, "Opp_Roll3": 10.3, "Opp_Roll5": 11.4},
     {"Season": 2025, "Week": 15, "Home": 1, "Team": "RAV", "Opp": "NWE", "Spread": -3.0, "Total": 48.5, "Last1": 24, "Roll3": 20.0, "Roll5": 21.2, "Opp_Last1": 31, "Opp_Roll3": 30.0, "Opp_Roll5": 29.0},
-    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +5.5, "Total": 46.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
+    {"Season": 2025, "Week": 15, "Home": 1, "Team": "CLT", "Opp": "SFO", "Spread": +5.5, "Total": 45.5, "Last1": 16, "Roll3": 17.0, "Roll5": 20.4, "Opp_Last1": 37, "Opp_Roll3": 27.7, "Opp_Roll5": 30.0}
 ]
 
 # Streamlit Display

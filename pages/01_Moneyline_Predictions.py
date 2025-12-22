@@ -328,8 +328,8 @@ week16_games_fd = [
     get_team_features(df, 2025, "RAI", spread=+14.5, total=38.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "RAV", spread=-3.5, total=49.5, home=1, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "NWE", spread=+3.5, total=49.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLT", spread=+5.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SFO", spread=-5.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CLT", spread=+4.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SFO", spread=-4.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
 ]
 
 week16_df_fd = pd.DataFrame(week16_games_fd)
@@ -392,8 +392,8 @@ week16_games_dk = [
     get_team_features(df, 2025, "RAI", spread=+14.0, total=39.5, home=0, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "RAV", spread=-3.0, total=48.5, home=1, stat_cols_for_avg=stat_cols),
     get_team_features(df, 2025, "NWE", spread=+3.0, total=48.5, home=0, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "CLT", spread=+5.5, total=46.5, home=1, stat_cols_for_avg=stat_cols),
-    get_team_features(df, 2025, "SFO", spread=-5.5, total=46.5, home=0, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "CLT", spread=+5.5, total=45.5, home=1, stat_cols_for_avg=stat_cols),
+    get_team_features(df, 2025, "SFO", spread=-5.5, total=45.5, home=0, stat_cols_for_avg=stat_cols),
 ]
 
 

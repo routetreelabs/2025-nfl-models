@@ -131,7 +131,7 @@ week16_games_fd = [
     ("DET", "PIT", -7.0, 51.5),
     ("HTX", "RAI", -14.5, 38.5),
     ("RAV", "NWE", -3.5, 48.5),
-    ("CLT", "SFO", +5.5, 46.5),
+    ("CLT", "SFO", +4.5, 46.5),
 ]
 
 week16_games_dk = [
@@ -150,7 +150,7 @@ week16_games_dk = [
     ("DET", "PIT", -7.5, 52.5),
     ("HTX", "RAI", -14.0, 39.5),
     ("RAV", "NWE", -3.0, 48.5),
-    ("CLT", "SFO", +5.5, 46.5),
+    ("CLT", "SFO", +5.5, 45.5),
 ]
 
 # Display Predictions
