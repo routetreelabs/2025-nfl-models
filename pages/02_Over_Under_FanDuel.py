@@ -28,12 +28,13 @@ st.markdown("""
 - Week 13: 8–8 ➖
 - Week 14: 6–8 ❌
 - Week 15: 10–6 ✅
+- Week 16: 10–6 ✅
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 # SET CURRENT WEEK
-current_week = 16  # Change this to the latest week when updating
+current_week = 17  # Change this to the latest week when updating
 
 # Load predictions for the current week
 pred_file = f"week{current_week}_2025_predictions_fd.csv"

@@ -1,0 +1,17 @@
+Game,Spread,Total,Prediction,ConfidencePercent,AvgDistance,ConfidenceScore
+Cowboys @ Commanders,8.5,50.5,Under,0.714,1.026,-1.8
+Lions @ Vikings,7.5,43.5,Under,0.571,0.286,40.8
+Broncos @ Chiefs,13.5,36.5,Over,0.714,3.501,-178.6
+Texans @ Chargers,-1.5,39.5,Over,0.571,0.618,21.8
+Ravens @ Packers,-3.0,40.5,Over,0.857,0.214,67.3
+Seahawks @ Panthers,7.5,42.5,Over,0.571,0.488,29.3
+Cardinals @ Bengals,-7.0,53.5,Over,0.571,0.761,13.6
+Buccaneers @ Dolphins,5.5,45.5,Over,0.857,0.357,55.1
+Jaguars @ Colts,6.5,48.5,Over,0.714,0.429,40.8
+Patriots @ Jets,13.5,42.5,Under,0.857,1.658,-56.4
+Saints @ Titans,3.0,38.5,Over,0.571,0.5,28.6
+Steelers @ Browns,3.0,34.5,Under,0.571,0.853,8.4
+Giants @ Raiders,-1.5,40.5,Over,0.714,0.559,31.5
+Eagles @ Bills,-1.5,44.5,Under,0.571,0.286,40.8
+Bears @ 49ers,-3.0,52.5,Under,0.571,0.357,36.7
+Rams @ Falcons,8.5,49.5,Under,0.571,0.773,12.9
