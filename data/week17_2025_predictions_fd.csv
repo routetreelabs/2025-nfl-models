@@ -1,9 +1,9 @@
 Game,Spread,Total,Prediction,ConfidencePercent,AvgDistance,ConfidenceScore
 Cowboys @ Commanders,8.5,50.5,Under,0.714,1.026,-1.8
-Lions @ Vikings,7.5,43.5,Under,0.571,0.286,40.8
+Lions @ Vikings,7.5,44.5,Over,0.571,0.488,29.3
 Broncos @ Chiefs,13.5,36.5,Over,0.714,3.501,-178.6
-Texans @ Chargers,-1.5,39.5,Over,0.571,0.618,21.8
-Ravens @ Packers,-3.0,40.5,Over,0.857,0.214,67.3
+Texans @ Chargers,-1.5,40.5,Over,0.714,0.559,31.5
+Ravens @ Packers,-3.0,38.5,Under,0.714,0.429,40.8
 Seahawks @ Panthers,7.5,42.5,Over,0.571,0.488,29.3
 Cardinals @ Bengals,-7.0,53.5,Over,0.571,0.761,13.6
 Buccaneers @ Dolphins,5.5,45.5,Over,0.857,0.357,55.1
