@@ -34,6 +34,7 @@ st.markdown("**Week 13 Record:** Both models 9–7 ✅")
 st.markdown("**Week 14 Record:** Both models 7–7 ➖")
 st.markdown("**Week 15 Record:** Both models 10–6 ✅")
 st.markdown("**Week 16 Record:** Both models 9–7 ✅")
+st.markdown("**Week 17 Record:** Both models 9–7 ✅")
 
 # Controls
 debug = st.checkbox("Debug mode (print intermediate variables)")

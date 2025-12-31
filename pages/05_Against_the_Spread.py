@@ -13,6 +13,7 @@ st.markdown("**Week 13 Record:** Both models 9–7 ✅")
 st.markdown("**Week 14 Record:** Both models 7–7 ➖")
 st.markdown("**Week 15 Record:** Both models 7–9 ❌")
 st.markdown("**Week 16 Record:** Both models 11–4 ✅")
+st.markdown("**Week 17 Record:** Both models 6–10 ❌")
 
 
 # Load data
