@@ -41,7 +41,7 @@ debug = st.checkbox("Debug mode (print intermediate variables)")
 
 # Data
 DATA_DIR = os.path.join(os.getcwd(), "datasets")
-csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week17_copy.csv")
+csv_path = os.path.join(DATA_DIR, "nfl_gamelogs_vegas_2015-2025_ML_week18_copy.csv")
 
 
 if not os.path.exists(csv_path):
