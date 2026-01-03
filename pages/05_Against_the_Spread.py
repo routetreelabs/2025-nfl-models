@@ -16,7 +16,7 @@ st.markdown("**Week 16 Record:** Both models 11–4 ✅")
 st.markdown("**Week 17 Record:** Both models 6–10 ❌")
 
 # Load data
-df = pd.read_csv("datasets/nfl_gamelogs_vegas_2015-2025_ML_week16_copy.csv")
+df = pd.read_csv("datasets/nfl_gamelogs_vegas_2015-2025_ML_week17_copy.csv")
 
 # Feature Engineering
 df['Cover_Binary'] = df['Cover']
@@ -114,51 +114,51 @@ def run_weekly_ats_predictions(model, df, season, week, matchups, stat_cols_for_
 
 
 # Week 12 Matchups
-season, week = 2025, 17
+season, week = 2025, 18
 
-week17_games_fd = [
-    ("WAS", "DAL", +8.5, 50.5),
-    ("MIN", "DET", +7.5, 44.5),
-    ("KAN", "DEN", +13.5, 36.5),
-    ("SDG", "HTX", -1.5, 40.5),
-    ("GNB", "RAV", -3.0, 38.5),
-    ("CAR", "SEA", +6.5, 42.5),
-    ("CIN", "CRD", -7.0, 53.5),
-    ("MIA", "TAM", +5.5, 43.5),
-    ("CLT", "JAX", +4.5, 48.5),
-    ("NYJ", "NWE", +13.5, 42.5),
-    ("OTI", "NOR", +1.5, 38.5),
-    ("CLE", "PIT", +3.5, 34.5),
-    ("RAI", "NYG", +3.0, 39.5),
-    ("BUF", "PHI", -3.0, 44.5),
-    ("SFO", "CHI", -3.5, 52.5),
-    ("ATL", "RAM", +7.5, 49.5),
+week18_games_fd = [
+    ("TAM", "CAR", -3.0, 43.5),
+    ("SFO", "SEA", +2.5, 47.5),
+    ("ATL", "NOR", -3.5, 44.5),
+    ("CIN", "CLE", -7.5, 44.5),
+    ("NYG", "DAL", +3.5, 49.5),
+    ("MIN", "GNB", -8.5, 36.5),
+    ("HTX", "CLT", -10.5, 38.5),
+    ("JAX", "OTI", -12.5, 47.5),
+    ("RAI", "KAN", +5.5, 36.5),
+    ("CHI", "DET", -3.0, 50.5),
+    ("DEN", "SDG", -13.5, 37.5),
+    ("NWE", "MIA", -11.5, 45.5),
+    ("PHI", "WAS", -3.5, 39.5),
+    ("RAM", "CRD", -8.5, 45.5),
+    ("BUF", "NYJ", -7.5, 37.5),
+    ("PIT", "RAV", +3.5, 41.5),
 ]
 
-week17_games_dk = [
-    ("WAS", "DAL", +8.5, 50.5),
-    ("MIN", "DET", +7.5, 43.5),
-    ("KAN", "DEN", +13.5, 36.5),
-    ("SDG", "HTX", -1.5, 40.5),
-    ("GNB", "RAV", -3.0, 38.5),
-    ("CAR", "SEA", +6.5, 42.5),
-    ("CIN", "CRD", -7.0, 52.5),
-    ("MIA", "TAM", +5.5, 44.5),
-    ("CLT", "JAX", +4.5, 48.5),
-    ("NYJ", "NWE", +12.5, 42.5),
-    ("OTI", "NOR", +1.5, 38.5),
-    ("CLE", "PIT", +3.5, 34.5),
-    ("RAI", "NYG", +3.0, 40.5),
-    ("BUF", "PHI", -3.0, 45.5),
-    ("SFO", "CHI", -3.5, 51.5),
-    ("ATL", "RAM", +7.5, 49.5),
+week18_games_dk = [
+    ("TAM", "CAR", -3.0, 43.5),
+    ("SFO", "SEA", +2.5, 47.5),
+    ("ATL", "NOR", -3.5, 43.5),
+    ("CIN", "CLE", -7.5, 44.5),
+    ("NYG", "DAL", +3.5, 49.5),
+    ("MIN", "GNB", -9.5, 36.5),
+    ("HTX", "CLT", -10.0, 38.5),
+    ("JAX", "OTI", -13.5, 47.5),
+    ("RAI", "KAN", +5.5, 36.5),
+    ("CHI", "DET", -3.0, 50.5),
+    ("DEN", "SDG", -13.5, 37.5),
+    ("NWE", "MIA", -11.5, 45.5),
+    ("PHI", "WAS", -4.5, 38.5),
+    ("RAM", "CRD", -8.5, 46.5),
+    ("BUF", "NYJ", -7.5, 37.5),
+    ("PIT", "RAV", +3.5, 41.5),
 ]
 
 # Display Predictions
-st.subheader("FanDuel Lines - Week 17 ATS Predictions")
-ats_fd = run_weekly_ats_predictions(ats_model, df, season, week, week17_games_fd, stat_cols)
+st.subheader("FanDuel Lines - Week 18 ATS Predictions")
+ats_fd = run_weekly_ats_predictions(ats_model, df, season, week, week18_games_fd, stat_cols)
 st.dataframe(ats_fd, use_container_width=True)
 
-st.subheader("DraftKings Lines - Week 17 ATS Predictions")
-ats_dk = run_weekly_ats_predictions(ats_model, df, season, week, week17_games_dk, stat_cols)
+st.subheader("DraftKings Lines - Week 18 ATS Predictions")
+ats_dk = run_weekly_ats_predictions(ats_model, df, season, week, week18_games_dk, stat_cols)
 st.dataframe(ats_dk, use_container_width=True)

@@ -34,7 +34,7 @@ st.markdown("""
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 # SET CURRENT WEEK HERE
-current_week = 17
+current_week = 18
 
 # Load DK predictions file
 pred_file = f"week{current_week}_2025_predictions_dk.csv"
