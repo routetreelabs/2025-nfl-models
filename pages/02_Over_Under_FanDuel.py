@@ -30,6 +30,7 @@ st.markdown("""
 - Week 15: 10–6 ✅
 - Week 16: 10–6 ✅
 - Week 17: 6–10 ❌
+- Week 18: 9–7 ✅
 """)
 
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
